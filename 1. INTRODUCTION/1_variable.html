@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .container {
+            padding: 5%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .container .card img {
+            width: 80%;
+            display: block;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            filter: drop-shadow(10px 10px 5px #e18b8b);
+        }
+
+        .container .card {
+            padding: 20px;
+            background-color: rgb(253, 235, 235);
+            box-shadow: 0px 0px 10px #b1b1b1;
+        }
+
+        .container .card p {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <script>
+        var first_h1 = '<h1>Parma ham and arugula</h1>';
+        var firstImage = '<img src="https://assets.nicepagecdn.com/11a8ddce/6192674/images/4545.png">';
+        var fisrt_para = '<p>Nulla consequat massa quis enim. Donec pede justo fringilla vel.</p>'
+
+        //second card
+        var second_h1 = '<h1>Mozzarella and fresh basil</h1>'
+        var second_image = '<img src="https://assets.nicepagecdn.com/11a8ddce/6192674/images/poster_event_2383047.png">'
+        var second_para = '<p>Nulla consequat massa quis enim. Donec pede justo fringilla vel.</p>'
+
+        var third_h1 = "<h1>Tomatoes and pesto sauce</h1>";
+        var third_image = '<img src="https://assets.nicepagecdn.com/11a8ddce/6192674/images/33.png">'
+        var third_para = '<p>Nulla consequat massa quis enim. Donec pede justo fringilla vel.</p>'
+
+
+        document.write(`
+            <section class="container">
+                <div class="card">
+                ${first_h1}
+                ${firstImage}
+                ${fisrt_para}
+                </div>   
+
+                <div class="card">
+                ${second_h1}
+                ${second_image} 
+                ${second_para}   
+                </div>
+
+                <div class="card">
+                ${third_h1}
+                ${third_image}
+                ${third_para}    
+                </div>
+            </section>
+
+            ${first_h1}
+        `)
+    </script>
+</body>
+
+</html>

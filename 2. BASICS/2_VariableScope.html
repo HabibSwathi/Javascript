@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Variable Scopes</h1>
+        <p>1. Global Scope -> Defines outside the block.</p>
+        <p>2. Local Scope -> Defines inside the block.</p>
+    </center>
+    <hr>
+
+    <script>
+        // internal script 
+
+        var a = 20;
+        document.write(`<h1>variable a value is = ${a} </h1>`);
+
+        const b = 33;
+        document.write(`<h1>variable b value is = ${b} </h1>`);
+
+        var c = 100;
+        document.write(`<h1>variable a value is = ${c} </h1>`);
+        document.write(`<h1>1 <hr> <br> 2 </h1>` + c);
+    </script>
+</body>
+
+</html>
