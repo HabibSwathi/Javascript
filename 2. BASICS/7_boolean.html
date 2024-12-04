@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Boolean DataType</h1>
+    </center>
+
+    <script>
+        let firstNumber = 100;
+        let secondNumber = 200;
+        let string = "hscdhshbchsbdhcbs";
+
+        if (firstNumber > secondNumber) {
+            document.write(`<h1>Yes, the first number is greater than to second number</h1>`)
+        } else {
+            document.write(`<h1>No, the first number is not greater than to second number</h1>`)
+        }
+
+        let isOnline = true;
+
+        document.write(`<h1>with value of isOnline is ${isOnline}</h1>`)
+
+        if (isOnline == 1) {
+            document.write(`<h1 style="color:green">Your friend is online</h1>`)
+        } else {
+            document.write(`<h1 style="color:red">Your friend is offline</h1>`)
+        }
+
+        //to know the datatype of any variable we can use typeof keyword or typeof method
+        document.write(`<h1>${typeof(isOnline)}</h1>`)
+        document.write(`<h1>${typeof isOnline}</h1>`)
+        document.write(`<h1>${typeof(string)}</h1>`)
+    </script>
+</body>
+
+</html>

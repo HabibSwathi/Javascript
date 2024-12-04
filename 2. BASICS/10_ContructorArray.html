@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>ARRAY</h1>
+        <p>
+            <p>array is collection of data</p>
+        </p>
+    </center>
+
+
+    <h1>THERE ARE 3 TYPES OF ARRAYS..!</h1>
+    <ol>
+        <li>
+            Literal Arrays = Single
+            <ol>
+                <li>Literal</li>
+                <li>Arrays creating using Constructor method</li>
+                <li>Arrays creating using Constructor with paratameter</li>
+            </ol>
+        </li>
+        <li>Object Array</li>
+        <li>JSON Array</li>
+    </ol>
+
+    <script>
+        //literal array - constructor method
+        let numbers = new Array(); //instance for constructor;
+        console.log(numbers); //[] empty array bcz just we created array but not adding values
+
+        //to assaign values inside the constructor array
+        //variablename[index position] = value - formula
+        numbers[0] = 1; //in index 0 position we are adding one value that is 1
+        console.log(numbers); //[1] length is 1
+        console.log(numbers[0]);; //1
+        console.log("length " + numbers.length);
+
+        //assaign more at atime
+        numbers[1] = 2;
+        numbers[2] = "hello worlds";
+        numbers[3] = "javascript";
+        //in any index if we miss it shows empty value
+        numbers[5] = 100;
+        console.log(numbers);; //[1, 2, 'hello worlds', 'javascript', empty, 100]
+    </script>
+
+</body>
+
+</html>

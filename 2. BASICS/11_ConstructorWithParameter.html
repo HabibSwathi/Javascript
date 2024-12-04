@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>ARRAY</h1>
+        <p>
+            <p>array is collection of data</p>
+        </p>
+    </center>
+
+
+    <h1>THERE ARE 3 TYPES OF ARRAYS..!</h1>
+    <ol>
+        <li>
+            Literal Arrays = Single
+            <ol>
+                <li>Literal</li>
+                <li>Arrays creating using Constructor method</li>
+                <li>Arrays creating using Constructor with paratameter</li>
+            </ol>
+        </li>
+        <li>Object Array</li>
+        <li>JSON Array</li>
+    </ol>
+
+    <script>
+        //Arrays creating using Constructor with paratameter
+        //keyword variable Name = new Array(we can pass multiple values that is parameters)
+        var colors = new Array("red", "green", "blue", "yellow");
+        console.log(colors);
+        console.log(colors[0]);
+        console.log(colors.length);
+
+        //to get last index value dynamically we can use that array length - 1
+        console.log(colors[3]); //colors[4-1 = 3] (colors[3])
+        //to assaign new values
+        colors[4] = "goldenRed"
+        console.log(colors);
+
+        colors[3] = "updated_yellow"
+        console.log(colors);
+    </script>
+
+</body>
+
+</html>

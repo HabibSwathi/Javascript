@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <center>
+        <h1>ARRAY</h1>
+        <p>
+            <p>array is collection of data</p>
+        </p>
+    </center>
+
+
+    <h1>THERE ARE 3 TYPES OF ARRAYS..!</h1>
+    <ol>
+        <li>
+            Literal Arrays = Single
+            <ol>
+                <li>Literal</li>
+                <li>Arrays creating using Constructor method</li>
+                <li>Arrays creating using Constructor with paratameter</li>
+            </ol>
+        </li>
+        <li>Object Array</li>
+        <li>JSON Array</li>
+    </ol>
+
+    <script>
+        //literal Array
+        let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        const names = ["avinash", "shareef", "vijay", "raj", "durgappa", "naresh", "shanmug", "anupuma", "swathi",
+            "yashaswini", "halesh"
+        ]
+        console.log(numbers);
+        document.write(`<h1>numbers array = ${numbers}</h1>`); //1, 2, 3, 4, 5, 6, 7, 8, 9
+
+        //length of the array is
+        console.log(numbers.length);;
+        document.write(`<h3>length of the array numbers = ${numbers.length}</h3>`)
+
+        document.write(`<h1>array numbers index 0 value = ${numbers[0]}</h1>`); //output:1
+        document.write(`<h1>array numbers index 5 value = ${numbers[4]}</h1>`); //output:5
+
+
+        document.write(`<button>${names[5]}</button>`)
+        document.write(`<button>${names[2]}</button>`)
+        document.write(`<button class=${names[0]}>${names[1]}</button>`)
+    </script>
+
+</body>
+
+</html>
