@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basics in js</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            padding: 4%;
+            min-height: 100vh;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container .card {
+            width: 350px;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .container .card img {
+            width: 100%;
+        }
+
+        .card button {
+            width: 100%;
+            padding: 10px 30px;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            border: none;
+            background-color: rgb(9, 82, 146);
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <script>
+        var hello = "hello javascript";
+        console.log(1 + 1) //output:2
+        console.log(hello); //output: hello javascript
+
+        // document.write(hello); //output:hello javascript
+        // document.write("<h1>hello</h1>")
+        // document.write( < h1 > $ {
+        //             hello
+        //         } </h1>);
+
+        document.write(`
+            <section class="container">
+                <div class="card">
+                <img src="https://media.istockphoto.com/id/157681198/photo/dandelion-seed.jpg?s=612x612&w=0&k=20&c=TfhCtc_Y1oSpdlL7o6yo7BTfgnD0RCy6yF1SgvQO0Jk=" alt="js images">
+                <h2>nature images</h2>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quisquam error cum assumenda, expedita repellat rerum iure sunt fugiat quos exercitationem eos itaque nemo perferendis? Commodi minima molestias odit obcaecati!</p>
+                <button>Create account</button>
+            </div>    
+            </section>
+        `)
+    </script>
+</body>
+
+</html>
