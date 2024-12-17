@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+    </div>
+    <script>
+        const user = {
+            username:"test name",
+            profile:"https://reachspro.com/wp-content/uploads/2023/07/ceo-0202.png",
+            age:23,
+            status:"good",
+            grade:"a+",
+            phonenumber:"+9183787744",
+            email:"test@gmail.com",
+            education:[
+                {
+                    coursename:"SSLC",
+                    year:2018,
+                    score:"84%",
+                    subjects:[
+                        {
+                            subjectName:"English",
+                            marks:89
+                        },
+                        {
+                            subjectName:"Physics",
+                            marks:62
+                        }
+                    ]
+                },
+                {
+                    coursename:"PUC",
+                    year:2020,
+                    score:"92%",
+                    subjects:[
+                        {
+                            subjectName:"Physics Lab",
+                            marks:76
+                        },
+                        {
+                            subjectName:"Computer science Lab",
+                            marks:89
+                        }
+                    ]
+                },
+                {
+                    coursename:"B.Tech",
+                    year:2023,
+                    score:"97%",
+                    subjects:[
+                        {
+                            subjectName:"Cs",
+                            marks:45
+                        },
+                        {
+                            subjectName:"EC",
+                            marks:56
+                        }
+                    ]
+                }
+            ]
+       }
+       const container = document.getElementById('container');
+       container.innerHTML += `<h1>${user.username}</h1>`
+       for(let index = 0; index<=user.username.length-1; index++){
+        console.log(user.education[index]);
+        container.innerHTML+= `<h3>Course Details<h3>`
+            container.innerHTML+= `<h3>${user.education[index].coursename}</h3>`
+            //container.innerHtml += `<h3>${user.education[index].coursename}</h3>`
+            container.innerHTML += `<h3>${user.education[index].year}</h3>`
+            container.innerHTML += `<h1>Subject Details</h1>`
+
+            //reading sub array in education object
+            for(let subIndex=0; subIndex<=user.education[index].subjects.length-1;subIndex++){
+                container.innerHTML += `<h1>${user.education[index].subjects[subIndex].subjectName}</h1>`
+                container.innerHTML += `<h1>${user.education[index].subjects[subIndex].marks}</h1>` 
+            }
+
+
+       }
+    </script>
+</body>
+</html>

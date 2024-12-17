@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>looping Statements</h1>
+    </center>
+
+    <ol>
+        <li>for loop</li>
+        <li>while loop</li>
+        <li>Do while loop</li>
+        <li>forEach()</li>
+        <li>for..in</li>
+        <li>for..of</li>
+        <li>for..await..of</li>
+    </ol>
+
+    <h1>For loop</h1>
+
+    <div id="container"></div>
+
+    <script>
+        const container = document.getElementById('container');
+        //syntax for for loop
+        // for(initlize variable, condition, increment/decrement){
+        //     //this will executes through for loop
+        // }
+
+        for(var i=1; i<=20; i++){
+            //statements
+            // document.write(<h1>hello ${i}</h1>)
+            container.innerHTML += <button>${i}</button>
+
+        }
+
+        //i=0 0<=20 true prints = hello
+        //i=10 10<=20- true prints = hello
+        //i=19 19<=20 true prints hello
+        //i=20 20=20 true prints hello
+        //i=21 21<=20 false it comes out of the loop
+
+        const simpledata = ["test1", "test2", "test3", "test4", "test5", "test6", "test7"];
+        container.innerHTML += <button>${simpledata[0]}</button>
+        //array iteration
+        for(var index=0; index<=simpledata.length-1; index++){ //index=0; index<=7-1 =>index<=6; index++
+            console.log(simpledata[index]);
+            container.innerHTML += <button>${simpledata[index]}</button>
+            
+
+        }
+
+
+        //object or json example 
+        let data = [
+        {
+        "question": "How long is the MERN stack course?",
+        "answer": "The duration of a MERN stack course can vary depending on the institute or platform offering the course. Typically, a MERN stack course ranges from a few weeks to a couple of months. Be Practical Tech Solutions is an institute in Bangalore which offers a 5 months long MERN stack developer course.",
+        "_id": "654e2dc012f18d9844a1b812"
+      },
+      {
+        "question": "Is MERN full-stack in demand?",
+        "answer": "Yes, the MERN (MongoDB, Express.js, React.js, Node.js) stack is in high demand for full-stack development. MERN offers a powerful combination of technologies for building scalable, efficient, and modern web applications. Its versatility, efficiency, and extensive community support have made it popular among developers and sought after by companies. Proficiency in the MERN stack opens numerous job opportunities and is a valuable skill in the current tech industry.",
+        "_id": "654e2dc012f18d9844a1b813"
+      },
+      {
+        "question": "Which institute is best for MERN stack?",
+        "answer": "When it comes to the best institute for MERN stack developer courses, BePractical tech solutions stands out. With their comprehensive MERN stack developer course, BePractical offers in-depth training on MongoDB, Express.js, React.js, and Node.js. Their experienced faculty, practical approach, and industry-relevant curriculum make them a preferred choice for individuals seeking to master the MERN stack and kickstart their career as a full-stack developer.",
+        "_id": "654e2dc012f18d9844a1b814"
+      },
+      {
+        "question": "Should I learn MERN stack as a fresher?",
+        "answer": "Learning the MERN stack as a fresher can be a great decision. The MERN stack is widely used in the industry and offers excellent career opportunities. It allows you to work on both front-end and back-end development, making you a versatile developer. By acquiring skills in MongoDB, Express.js, React.js, and Node.js, you can enhance your employability and stand out as a valuable candidate in the job market.",
+        "_id": "654e2dc012f18d9844a1b815"
+      }
+        ]
+
+
+        for(let objectindex=0; objectindex<=data.length-1; objectindex++){
+            //if the condition is true 
+            console.log(data[objectindex].question);
+            console.log(data[objectindex].answer);
+
+            container.innerHTML += `
+                <details>
+                    <summary>${data[objectindex].question}</summary>    
+                    <p>${data[objectindex].answer}</p>
+                </details>
+            `
+            
+
+
+
+            //after prints its increments the objectindex variable value value
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .quiz-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .answers label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let quizdata =[
+  {
+    "_id": "653b50df1bc6527630cb9061",
+    "question": "What is the primary purpose of version control in software development?",
+    "answers": [
+      "Code execution",
+      "Code testing",
+      "Code collaboration",
+      "Code encryption"
+    ],
+    "correctAnswer": "Code collaboration",
+    "__v": 0
+  },
+  {
+    "_id": "653b857a51a640a11aa11bd2",
+    "question": "Which programming language is commonly used for server-side web ",
+    "answers": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Python"
+    ],
+    "correctAnswer": "Python",
+    "__v": 0
+  },
+  {
+    "_id": "653b85e951a640a11aa11bd5",
+    "question": "What does the 'M' stand for in the 'MVC' architectural pattern",
+    "answers": [
+      "Model",
+      "View",
+      "Controller",
+      "Markup"
+    ],
+    "correctAnswer": "Model",
+    "__v": 0
+  },
+  {
+    "_id": "653b861151a640a11aa11bd7",
+    "question": " Which database type is known for its ability to handle complex relationships and is suitable for graph-based data?",
+    "answers": [
+      "Relational Database",
+      "NoSQL Database",
+      "Document Database",
+      "Graph Database"
+    ],
+    "correctAnswer": "Graph Database",
+    "__v": 0
+  },
+  {
+    "_id": "653b867551a640a11aa11bd9",
+    "question": "What does the acronym 'HTTP' stand for in the context of web development?",
+    "answers": [
+      "Hyperlink Text Transfer Protocol",
+      "Hypertext Transmission Protocol",
+      "Hypertext Transfer Protocol",
+      "Hypertext Text Protocol"
+    ],
+    "correctAnswer": "Hypertext Transfer Protocol",
+    "__v": 0
+  },
+  {
+    "_id": "653b86b651a640a11aa11bdb",
+    "question": "Which of the following is NOT a commonly used front-end web development framework?",
+    "answers": [
+      "Angular",
+      "React",
+      "Django",
+      "Vue.js"
+    ],
+    "correctAnswer": "Django",
+    "__v": 0
+  }
+]
+
+
+document.write(`<section.class="container">
+          <div class="quiz-container">
+            <center><h1>General Knowledge Quiz</h1></center>
+        <form id="quiz-form" action="">
+            <div class="question">
+
+                <h3>${quizdata[0].question}</h3>
+                <div class="answers">
+                    <label><input type="radio">${quizdata[0].answers[0]}</label>
+                    <label><input type="radio">${quizdata[0].answers[1]}</label>
+                    <label><input type="radio">${quizdata[0].answers[2]}</label>
+                    <label><input type="radio">${quizdata[0].answers[3]}</label>  
+                </div>
+            </div>
+             <div class="question">
+                <h3>${quizdata[1].question}</h3>
+                <div class="answers">
+                    <label><input type="radio">${quizdata[1].answers[0]}</label>
+                    <label><input type="radio">${quizdata[1].answers[1]}</label>
+                    <label><input type="radio">${quizdata[1].answers[2]}</label>
+                    <label><input type="radio">${quizdata[1].answers[3]}</label>  
+                </div>
+            </div>
+             <div class="question">
+                <h3>${quizdata[2].question}</h3>
+                <div class="answers">
+                    <label><input type="radio">${quizdata[2].answers[0]}</label>
+                    <label><input type="radio">${quizdata[2].answers[1]}</label>
+                    <label><input type="radio">${quizdata[2].answers[2]}</label>
+                    <label><input type="radio">${quizdata[2].answers[3]}</label>  
+                </div>
+            </div>
+             <div class="question">
+                <h3>${quizdata[3].question}</h3>
+                <div class="answers">
+                    <label><input type="radio">${quizdata[3].answers[0]}</label>
+                    <label><input type="radio">${quizdata[3].answers[1]}</label>
+                    <label><input type="radio">${quizdata[3].answers[2]}</label>
+                    <label><input type="radio">${quizdata[3].answers[3]}</label>  
+                </div>
+            </div>
+             <div class="question">
+                <h3>${quizdata[4].question}</h3>
+                <div class="answers">
+                    <label><input type="radio">${quizdata[4].answers[0]}</label>
+                    <label><input type="radio">${quizdata[4].answers[1]}</label>
+                    <label><input type="radio">${quizdata[4].answers[2]}</label>
+                    <label><input type="radio">${quizdata[4].answers[3]}</label>  
+                </div>
+            </div><br><br>
+            <button type="submit" class="submit-btn">Submit Quiz</button>
+        </form>
+    </div>
+
+
+</section>`)
+    </script>
+   
+</body>
+</html>

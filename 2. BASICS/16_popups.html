@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Javascript gerenating output...!</h1>
+    </center>
+    <hr>
+
+    <div  id="result"></div>
+
+
+    <script>
+        let firstNumber = 10;
+        let secondNumber = 30;
+
+        let total = firstNumber + secondNumber; //40
+
+        //method1
+        console.log("total = " + total);
+        
+        //method2
+        document.write(<h1>Total = ${total}</h1>);
+
+        //to insert any html element or output in perticular tag 
+        let resultDivision = document.getElementById('result');
+        console.log(resultDivision);
+        resultDivision.innerHTML = <h1>Total = ${total}</h1>; //it is used to insert html tags to document
+        
+
+        alert(`total = ${total},  alert`);
+        confirm(`total = ${total}, confirm`);
+        prompt(`total = ${total}, prompt`)
+    </script>
+</body>
+</html>

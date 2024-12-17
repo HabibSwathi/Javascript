@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: lightblue;
+        }
+        .card{
+            min-width: 350px;
+            min-height: 300px;
+            padding: 20px;
+            background-color: #fff;
+        }
+        .container .card img{
+            width: 100px;
+            display: block;
+            margin: auto;
+            border-radius: 100px;
+            border: 3px solid rgb(11, 88, 171);
+            padding: 5px;
+        }
+        table td, table th{
+            padding: 10px;
+        }
+        table{
+            margin-top: 30px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table th{
+            background-color: rgb(11, 88, 171);
+            color: #fff;
+            border: 1px solid #fff;
+        }
+    </style>
+</head>
+<body>
+
+
+    <script>
+        //object
+       const user = {
+            username:"test name",
+            profile:"https://reachspro.com/wp-content/uploads/2023/07/ceo-0202.png",
+            age:23,
+            status:"good",
+            grade:"a+",
+            phonenumber:"+9183787744",
+            email:"test@gmail.com",
+            education:[
+                {
+                    coursename:"SSLC",
+                    year:2018,
+                    score:"84%",
+                    subjects:[
+                        {
+                            subjectName:"English",
+                            marks:89
+                        },
+                        {
+                            subjectName:"Physics",
+                            marks:62
+                        }
+                    ]
+                },
+                {
+                    coursename:"PUC",
+                    year:2020,
+                    score:"92%",
+                    subjects:[
+                        {
+                            subjectName:"Physics Lab",
+                            marks:76
+                        },
+                        {
+                            subjectName:"Computer science Lab",
+                            marks:89
+                        }
+                    ]
+                },
+                {
+                    coursename:"B.Tech",
+                    year:2023,
+                    score:"97%",
+                    subjects:[
+                        {
+                            subjectName:"Cs",
+                            marks:45
+                        },
+                        {
+                            subjectName:"EC",
+                            marks:56
+                        }
+                    ]
+                }
+            ]
+       }
+
+
+       //objectname.keyname
+    //    document.write(<h1>username: ${user.username}</h1>)
+    //    document.write(<h1>user: ${user}</h1>)
+    //    console.log(user);
+    //    console.log("datatype of user " + typeof(user));
+    //    document.write(<h1>age : ${user.age}</h1>)
+    //    document.write(<h1>status : ${user.status}</h1>)
+    //    document.write(<h1>Phone number : ${user.phonenumber}</h1>)
+    //    document.write(<h1>email : ${user.email}</h1>)
+    //    document.write(<h1>grade : ${user.grade}</h1>)
+    //    document.write(<h1>coursename1 : ${user.education[0].coursename}</h1>)
+    //    document.write(<h1>year : ${user.education[0].year}</h1>)
+    //    document.write(<h1>score : ${user.education[0].score}</h1>)
+    //    document.write(<h1>subjects1 : ${user.education[0].subjects[0].subjectName}</h1>)
+    //    document.write(<h1>marks : ${user.education[0].subjects[0].marks}</h1>)
+
+
+       document.write(`<section class="container">
+                <div class="card">
+                    <img src=${user.profile} alt=${user.username}>
+                    <h1>${user.username}</h1>
+                    <p>${user.email}</p>
+                    <h3>Age: ${user.age}</h3>
+                    <table border="1" cellpadding="15" cellspacing="0">
+                        <tr>
+                            <th>Si.No</th>
+                            <th>Course Name</th>
+                            <th>Score</th>
+                            <th>Year</th>
+                            <th>Subjects</th>
+                        </tr> 
+                        <tr>
+                            <td>01</td>    
+                            <td>${user.education[0].coursename}</td>    
+                            <td>${user.education[0].score}</td>    
+                            <td>${user.education[0].year}</td>    
+                            <td> subject1 = ${user.education[0].subjects[0].subjectName}, marks = ${user.education[0].subjects[0].marks} <br>  <br><hr> <br>subject2 = ${user.education[0].subjects[1].subjectName}, marks = ${user.education[0].subjects[1].marks} </td>    
+                        </tr>   
+
+                          <tr>
+                            <td>02</td>    
+                            <td>${user.education[1].coursename}</td>    
+                            <td>${user.education[1].score}</td>    
+                            <td>${user.education[1].year}</td>    
+                            <td> subject1 = ${user.education[1].subjects[0].subjectName}, marks = ${user.education[1].subjects[0].marks} <br>  <br><hr> <br>subject2 = ${user.education[1].subjects[1].subjectName}, marks = ${user.education[1].subjects[1].marks} </td>    
+                        </tr>
+                        
+                         <tr>
+                            <td>03</td>    
+                            <td>${user.education[2].coursename}</td>    
+                            <td>${user.education[2].score}</td>    
+                            <td>${user.education[2].year}</td>    
+                            <td> subject1 = ${user.education[2].subjects[0].subjectName}, marks = ${user.education[2].subjects[0].marks} <br>  <br><hr> <br>subject2 = ${user.education[2].subjects[1].subjectName}, marks = ${user.education[2].subjects[1].marks} </td>    
+                        </tr>
+                    </table>
+                </div>
+        </section>`)
+       
+       
+       
+     
+    </script>
+    
+</body>
+</html>

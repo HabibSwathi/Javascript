@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        form {
+            width: 350px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+
+        form input,
+        form select {
+            padding: 6px;
+            font-size: 0.9rem;
+            width: 100%;
+            border: none;
+            outline: none;
+            border: 1px solid #ccc;
+            margin-top: 3px;
+            margin-bottom: 6px;
+            border-radius: 5px;
+        }
+
+        form button,
+        .card a {
+            width: 100%;
+            padding: 8px;
+            font-size: 1rem;
+            background-color: #3014e6;
+            color: #fff;
+            border: none;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        form button:hover {
+            opacity: 0.8;
+        }
+
+        #result {
+            padding: 30px;
+        }
+
+        #result .card {
+            width: 350px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px #ccc;
+            margin: auto;
+        }
+
+        #result .card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .card img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="">
+            <label for="">Festival</label>
+            <select name="" id="festival">
+                <option value="" selected disabled>Select any festival</option>
+                <option value="Republic Day">Republic Day</option>
+                <option value="Holi">Holi</option>
+                <option value="Good Friday">Good Friday </option>
+                <option value="Id-ul-Fitr">Id-ul-Fitr</option>
+                <option value="Ram Navmi">Ram Navmi</option>
+            </select>
+            <span id="festival_error"></span>
+            <button type="button" onclick="FestivalChecker()">Know About this day</button>
+        </form>
+    </div>
+    <section id="result"></section>
+
+    <script>
+        let data = {
+            Republic_Day: {
+                date: 'January 26',
+                day: 'Friday',
+                about: "A republic is a state where the people's representatives hold political power, and the head of state is not a monarch. The term comes from the Latin phrase res publica, which means 'public affair'",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFJTHe8fjjbTS34tvTnC1l5jJs8_kzxBYxcQ&s",
+                link: 'https://en.wikipedia.org/wiki/Republic_Day_(India)'
+            },
+            Holi: {
+                date: '	March 25',
+                day: 'Monday',
+                about: "Holi, also known as the Festival of Colors, is a Hindu festival that celebrates the arrival of spring, the triumph of good over evil, and the love between the deities Radha and Krishna",
+                image: "https://www.hindustantimes.com/ht-img/img/2024/03/20/1600x900/98fe5d5c96f16f61ff_1710922427406_1710922427664.jpg",
+                link: 'https://en.wikipedia.org/wiki/Holi'
+            }
+        }
+
+        let selectedFestival = document.getElementById('festival');
+        let result = document.getElementById('result');
+        let festival_error = document.getElementById('festival_error');
+
+        function FestivalChecker() {
+            if (selectedFestival.value == "") {
+                festival_error.innerHTML = '<span style="color:red">Please select any festival</span>'
+            } else {
+                festival_error.innerHTML = ''
+                // alert(selectedFestival.value)
+                switch (selectedFestival.value) {
+                    case 'Republic Day':
+                        result.innerHTML = `
+                            <div class="card">
+                                <img src=${data.Republic_Day.image} alt="image">
+                                <p>Festival Date: ${data.Republic_Day.date}</p>
+                                <p>Festival day: ${data.Republic_Day.day}</p>
+                                <p>${data.Republic_Day.about}</p>
+                                <a href=${data.Republic_Day.link} target="_blank">Know more</a>
+                                </div>
+                        `
+                        break;
+                    case 'Holi':
+                        result.innerHTML = `
+                            <div class="card">
+                                <img src=${data.Holi.image} alt="image">
+                                <p>Festival Date: ${data.Holi.date}</p>
+                                <p>Festival day: ${data.Holi.day}</p>
+                                <p>${data.Holi.about}</p>
+                                <a href=${data.Holi.link} target="_blank">Know more</a>
+                                </div>
+                        `
+                        break;
+
+                    case 'Holi':
+                        result.innerHTML = `
+                            <div class="card">
+                                <img src=${data.Holi.image} alt="image">
+                                <p>Festival Date: ${data.Holi.date}</p>
+                                <p>Festival day: ${data.Holi.day}</p>
+                                <p>${data.Holi.about}</p>
+                                <a href=${data.Holi.link} target="_blank">Know more</a>
+                                </div>
+                        `
+                        break;
+
+                    case 'Holi':
+                        result.innerHTML = `
+                            <div class="card">
+                                <img src=${data.Holi.image} alt="image">
+                                <p>Festival Date: ${data.Holi.date}</p>
+                                <p>Festival day: ${data.Holi.day}</p>
+                                <p>${data.Holi.about}</p>
+                                <a href=${data.Holi.link} target="_blank">Know more</a>
+                                </div>
+                        `
+                        break;
+
+                    case 'Holi':
+                        result.innerHTML = `
+                            <div class="card">
+                                <img src=${data.Holi.image} alt="image">
+                                <p>Festival Date: ${data.Holi.date}</p>
+                                <p>Festival day: ${data.Holi.day}</p>
+                                <p>${data.Holi.about}</p>
+                                <a href=${data.Holi.link} target="_blank">Know more</a>
+                                </div>
+                        `
+                        break;
+
+                    default:
+                        result.innerHTML = `
+                            <div class="card">
+                                <img src='https://medihelp24.com/public/assets/img/no_data.gif' alt="image">
+                               
+                                </div>
+                        `
+
+                        break;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
