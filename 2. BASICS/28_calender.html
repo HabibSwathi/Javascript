@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 20px;
+            width: 80%;
+            margin: auto;
+            padding: 4%;
+            border: 2px solid #ccc;
+        }
+
+        .card {
+            min-height: 100px;
+            background-color: rgba(66, 66, 255, 0.139);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+        }
+
+        .card h1 {
+            font-size: 3rem;
+            color: rgb(57, 26, 235);
+        }
+
+        .today {
+            background-color: rgb(57, 26, 235);
+        }
+
+        .today h1 {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="container"></section>
+
+    <script>
+        let container = document.getElementById('container');
+
+        for (let day = 1; day <= 31; day++) {
+            console.log(day);
+
+            if (day == 18) {
+                container.innerHTML +=
+                    `<div class = "card today">
+                        <h1>${day}</h1>
+                    </div>`
+            } else {
+                container.innerHTML +=
+                    `<div class = "card">
+                        <h1>${day}</h1>
+                    </div>`
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>1. Default Function (No Parameter, No Return)</h1>
+        <p>Function can be called multiple times</p>
+    </center>
+    <hr>
+
+    <button onclick="Total()">Call Total function</button>
+    <button onclick="Total()">Call Total function</button>
+
+    <script>
+        function defaultFunction() {
+            // function body
+            console.log('default function is called');
+            // defaultFunction(); //recursive - function calling itself
+        }
+
+        defaultFunction();
+
+        // calling functions
+        // defaultFunction(); //calling
+        // defaultFunction(); //calling
+        // defaultFunction(); //calling
+        // defaultFunction(); //calling
+        // defaultFunction(); //calling
+        // defaultFunction(); //calling
+        // defaultFunction(); //calling
+        // defaultFunction(); //calling
+        // defaultFunction(); //calling
+        // defaultFunction(); //calling
+        // defaultFunction(); //calling
+        // defaultFunction(); //calling
+        // defaultFunction(); //calling
+
+        // we can call functions using events 
+        let a = Number(prompt('enter the first number')),
+            b = Number(prompt('enter the second number'));
+
+        console.log(typeof a);
+        console.log(typeof b);
+
+        function Total() {
+            document.write(`<h1>The total of 2 numbers = ${a+b}</h1>`)
+        }
+
+        // calling
+        // Total()
+    </script>
+
+</body>
+
+</html>

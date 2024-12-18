@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Without Parameter, with Return Value Example:</h1>
+    </center>
+
+    <script>
+        function addFunction() {
+            let firstnumber = 10,
+                secondNumber = 20,
+                total;
+            total = firstnumber + secondNumber; //30
+            document.write(`<h1>Before return </h1>`)
+            return total; //the returned value stores inside the function to get that value use the function name
+            document.write(`<h1>After return </h1>`)
+        }
+
+        // console.log(addFunction());
+        let functionValue = addFunction()
+        // console.log(functionValue)//30);
+        document.write(`<h1>FUnction returned value ${addFunction()}</h1>`)
+
+
+        function fullNameGenerater() {
+            let firstName = prompt('enter firstname')
+            let lastName = prompt('enter lastname')
+            let fullname = firstName + " " + lastName;
+            // console.log(fullname);
+            return fullname;
+
+        }
+        // console.log(fullNameGenerater());
+        let functionReturnedValue = fullNameGenerater();
+        console.log(functionReturnedValue);
+        document.write(`<h1>${functionReturnedValue}</h1>`)
+
+        function a() {
+            return 20;
+        }
+
+        function b() {
+            return 20;
+        }
+
+        function c() {
+            return 30;
+        }
+        let totalFunctionsValue = a() + b() + c();
+        console.log(totalFunctionsValue);
+
+
+        function e() {
+            return true;
+        }
+        console.log(e());
+    </script>
+
+</body>
+
+</html>

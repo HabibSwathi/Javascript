@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Nested Conditions</h1>
+    </center>
+
+    <hr>
+
+    <script>
+        let number = prompt("Please enter a number"); // getting number from user using prompt
+
+        //parent condition
+
+        if (number <= 20) {
+            if (number == 5) {
+                document.write(`<h1>Given number is 5</h1>`)
+            } else if (number == 10) {
+                document.write(`<h1>Given number is 10</h1>`)
+            } else {
+                document.write(`<h1>Given number is greater than 10</h1>`)
+            }
+        } else {
+            if (number > 20 && number <= 30) {
+                document.write(`<h1 style = "color:green">given Number is ${number}</h1>`)
+            } else {
+                document.write(`<h1 style = "color:red">Please enter a number below 30</h1>`)
+
+            }
+        }
+    </script>
+</body>
+
+</html>

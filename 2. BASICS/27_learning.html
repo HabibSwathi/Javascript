@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="container" id="container">
+        <!-- <h1>Hello world</h1> -->
+        <h1>Hello world</h1>
+
+
+
+    </section>
+
+    <script>
+        let contianer = document.getElementById('container');
+        let h1 = document.createElement('h1');
+        h1.innerText = 'Hello world';
+        contianer.appendChild(h1);
+
+        //creating image tag
+        let imageTag = document.createElement('img');
+        imageTag.src =
+            'https://imageio.forbes.com/specials-images/imageserve/61d52d4e3a76ed81ac034ea8/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds';
+        imageTag.alt = 'this is the image';
+        contianer.appendChild(imageTag);
+
+        let tableTag = document.createElement('table');
+
+        let tr1 = document.createElement('tr');
+
+        let th1 = document.createElement('th');
+        th1.innerText = 'SI.No';
+
+        let th2 = document.createElement('th');
+        th2.innerText = 'NAME';
+
+        let th3 = document.createElement('th');
+        th3.innerText = 'ADDRESS';
+
+        let th4 = document.createElement('th');
+        th4.innerText = 'REMARKS';
+
+        //styles for th tag
+
+        // th1.style.border = '2px solid #fff'
+        // th2.style.border = '2px solid #fff'
+        // th3.style.border = '2px solid #fff'
+        // th4.style.border = '2px solid #fff'
+
+        // th1.style.color = "#fff"
+        // th2.style.color = "#fff"
+        // th3.style.color = "#fff"
+        // th4.style.color = "#fff"
+
+        let allThTags = [th1, th2, th3, th4]
+        console.log(allThTags);
+        console.log(allThTags[0]);
+        // allThTags[0].style.borderRadius = '100px'
+        // allThTags[1].style.borderRadius = '100px'
+        // allThTags[2].style.borderRadius = '100px'
+        // allThTags[3].style.borderRadius = '100px'
+
+
+
+        // using for loop 
+        for (let i = 0; i <= 3; i++) {
+            console.log(i);
+            // allThTags[i].style.borderRadius = '100px'
+            allThTags[i].style.border = '2px solid #fff'
+            allThTags[i].style.color = "#fff"
+
+        }
+
+        tr1.appendChild(th1)
+        tr1.appendChild(th2)
+        tr1.appendChild(th3)
+        tr1.appendChild(th4)
+
+        tr1.style.backgroundColor = 'red'
+
+        //now need add this tr1 inside the table
+        tableTag.appendChild(tr1);
+        tableTag.border = '1'
+        tableTag.cellPadding = '15';
+        tableTag.cellSpacing = 0;
+
+
+        //creating multiple variable at a time
+        var td1, td2, td3, td4;
+
+
+
+
+        //styles for table tag
+        tableTag.style.borderCollapse = 'collapse'
+        contianer.appendChild(tableTag);
+
+        const firstname = "test",
+            secondName = "test2";
+        console.log(firstname);
+        console.log(secondName);
+
+
+        //how can we create multiple variable at a time means single line with only one keyword(var let const)
+
+        //how can we  create any multiple things using for loop
+        //how can we create html element using document.createElement(tagname);
+        // how can we add value for  any attribute using that tagname.attributename = value
+        //how can append  the childs inside the any html element
+
+
+        let marqueetag = document.createElement('marquee');
+
+        let Marqueeh1 = document.createElement('h1');
+        Marqueeh1.innerText = 'This is heading text inside the marquee tag';
+        //adding h1 tag inside the marquee tag
+        marqueetag.appendChild(Marqueeh1);
+
+
+        document.body.appendChild(marqueetag)
+        contianer.appendChild(marqueetag);
+
+        console.log(marqueetag);
+    </script>
+</body>
+
+</html>
