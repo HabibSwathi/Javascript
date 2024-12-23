@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>parseInt(), parseFloat(), fixedTo() </h1>
+    </center>
+
+    <script>
+        let x = "123";
+        let y = "12354.54544545"
+        let z = "apple";
+
+        console.log("ParseInt = ", parseInt(x)); // it returns only integer value
+        console.log("ParseFloat = ", parseFloat(x)); //it returns only floating values
+        console.log("Number = ", Number(x)); //it returns both integer and floating values
+
+        console.log("ParseInt = ", parseInt(y)); // it returns only integer value
+        console.log("ParseFloat = ", parseFloat(y)); //it returns only floating values
+        console.log("Number = ", Number(y)); //it returns both integer and floating values
+
+        let decimalNumber = 123525.5452;
+        document.write(`<h1>DecimalNumber Value = ${decimalNumber}</h1>`)
+        document.write(`<h1>DecimalNumber.toFixed() Value = ${decimalNumber.toFixed()}</h1>`)
+
+        console.log("Fixed to toFixed() ", decimalNumber.toFixed()); //123526
+        console.log("Fixed to toFixed(1) ", decimalNumber.toFixed(1)); //123525.5
+        console.log("Fixed to toFixed(2) ", decimalNumber.toFixed(2)); //123525.55
+        console.log("Fixed to toFixed(6) ", decimalNumber.toFixed(6)); //123525.545200
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Converting to Boolean datatypes</h1>
+    </center>
+    <hr>
+
+    <script>
+        let a1 = Boolean(1) //returns true
+        console.log(a1); //true
+
+        let a2 = Boolean(0) //returns false
+        console.log(a2); //false
+
+        let a3 = Boolean(3) //returns true
+        console.log(a3); //true
+
+
+        console.log(Boolean(null)); //false
+        console.log(Boolean(undefined)); //false
+        console.log(Boolean(NaN)); //false
+        console.log(Boolean("hello")); //true
+        console.log(Boolean(true)); //true
+        console.log(Boolean(false)); //false
+
+
+        let a = "hello world";
+        console.log(Boolean(a)); //false
+
+        // if(a==false)
+
+        // if(a)//true
+        // if(!a) //false
+
+        if (a) { //this  will be tru when the a have some value
+            console.log('a have some value');
+
+        } else {
+            console.log('a is empty value');
+
+        }
+
+        // const username = document.getElementById('name');
+
+        // if(!username.value){
+        //     //errors
+        // }else{
+        //     //success
+        // }
+
+        // if(username.value.length>0 || username.value != "")
+    </script>
+
+</body>
+
+</html>

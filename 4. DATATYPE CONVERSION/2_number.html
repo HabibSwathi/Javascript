@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Converting to number datatype</h1>
+    </center>
+    <hr>
+
+    <script>
+        let string1 = "123";
+        console.log("str1 value ", string1); //"123"
+        console.log("type is ", typeof (string1)); //string
+
+        //example 1
+        let output1 = Number(string1);
+        console.log("output1 value ", output1); //123
+        console.log("type is ", typeof (output1)); //number
+
+        // examples
+        console.log(Number("123")); //123
+        console.log(Number("123.23")); //123.23
+        console.log(Number(true)); //1
+        console.log(Number(false)); //0
+        console.log(Number(123e-1)); //12.3
+        console.log(Number("Apple")); //NaN
+        console.log(Number(undefined)); //NaN
+        console.log(Number(null)); //0
+        console.log(Number("Hello World")); //NaN
+        console.log(Number(145.987)); //145.987
+    </script>
+</body>
+
+</html>

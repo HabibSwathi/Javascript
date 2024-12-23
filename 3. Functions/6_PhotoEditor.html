@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Editor</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .photo {
+            min-height: 70vh;
+            background-color: #1f1f1f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .actions {
+            min-height: 30vh;
+            background-color: #0c0c0c;
+            padding: 20px;
+        }
+
+        .photo img {
+            width: 400px;
+            height: 400px;
+        }
+
+        .actions input {
+            accent-color: pink;
+            width: 300px;
+        }
+
+        label {
+            filter: brightness(100%) saturate() hue-rotate() blur();
+            color: #fff;
+            /* filter: contrast() opacity() ;
+            filter: ; */
+            /* filter: ; */
+            /* filter: ; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="container">
+        <div class="photo">
+            <img src="https://www.classiblogger.com/wp-content/uploads/2023/09/Bal-Ganesh-Bansuri-Directory-of-Lord-Vinayaga-Images-classiblogger-vinayagar-images-free-download-300x300.jpg"
+                alt="ganesha image" id="image">
+        </div>
+        <div class="actions">
+            <div>
+                <label for="">Brightness</label> <br>
+                <input type="range" name="" id="brightness" min="0" max="100" value="100" onchange="HandleEdit()">
+            </div>
+
+            <div>
+                <label for="">Saturation</label> <br>
+                <input type="range" name="" id="saturate" min="0" max="100" value="100" onchange="HandleEdit()">
+            </div>
+
+            <div>
+                <label for="">Hue Rotate</label> <br>
+                <input type="range" name="" id="hue" min="0" max="360" value="0" onchange="HandleEdit()">
+            </div>
+
+            <div>
+                <label for="">Contrast</label> <br>
+                <input type="range" name="" id="contrast" min="0" max="100" value="100" onchange="HandleEdit()">
+            </div>
+
+            <div>
+                <label for="">Rounded radius</label> <br>
+                <input type="range" name="" id="radius" min="0" max="200" value="0" onchange="HandleEdit()">
+            </div>
+            <div>
+                <label for="">invert</label> <br>
+                <input type="range" name="" id="invert" min="0" max="100" value="0" onchange="HandleEdit()">
+            </div>
+            <div>
+                <label for="">border color</label> <br>
+                <input type="color" name="" id="color" value="#00000" onchange="HandleEdit()">
+            </div>
+            <div>
+                <select name="" id="b-style" onchange="HandleEdit()">
+                    <option value="" disabled selected>Please select style</option>
+                    <option value="solid">Solid</option>
+                    <option value="dotted">Dotted</option>
+                    <option value="dashed">Dashed</option>
+                    <option value="double">Double</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="">invert</label> <br>
+                <input type="range" name="" id="b-width" min="0" max="100" value="0" onchange="HandleEdit()">
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <script>
+        let brightnessValue = document.getElementById('brightness');
+        let saturatevalue = document.getElementById('saturate');
+        let hueValue = document.getElementById('hue');
+        let contrastValue = document.getElementById('contrast');
+        let radiusValue = document.getElementById('radius');
+        let invertValue = document.getElementById('invert');
+        let colorValue = document.getElementById('color');
+        let borderwidth = document.getElementById('b-width');
+        let borderstyle = document.getElementById('b-style');
+        let image = document.getElementById('image');
+
+        function HandleEdit() {
+            image.style.filter =
+                `brightness(${brightnessValue.value}%) saturate(${saturatevalue.value}%) hue-rotate(${hueValue.value}deg) contrast(${contrastValue.value}%) invert(${invertValue.value}%)`
+            image.style.borderRadius = `${radiusValue.value}px`
+            image.style.border = `${borderwidth.value}px ${borderstyle.value} ${colorValue.value}`
+            console.log(brightnessValue.value);
+            console.log(colorValue.value);
+            console.log(`${borderwidth.value}px ${borderstyle.value} ${colorValue.value}`);
+
+
+
+        }
+        HandleEdit()
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>datatype conversion</h1>
+    </center>
+
+    <h1>Converting to string datatype</h1>
+    <hr>
+
+    <script>
+        let number = 123; //number datatype
+        console.log(number);
+        console.log('typeof = ', typeof (number)); //number
+
+        //converting to string
+
+        let str = String(number); //123 by using string constructor we can convert to string datatype
+
+        console.log(str); //123
+        console.log('typeof = ', typeof (str)); //string
+
+        //converting boolean datatype to string datatype
+
+        const isAdmin = true;
+        console.log("isAdmin value = ", isAdmin); //true
+        console.log("datatype is ", typeof (isAdmin)); //boolean
+
+        //"true"
+        let output1 = String(isAdmin);
+        console.log("output1 value = ", output1); //true
+        console.log("datatype is ", typeof (output1)); //string
+
+        //floating value to string
+        let x = 123.546; //number
+        console.log("x value = ", x); //123.546
+        console.log("datatype is ", typeof (x)); //float
+
+        let output2 = String(x);
+        console.log("output2 value = ", output2); //123.546
+        console.log("datatype is ", typeof (output2)); //string
+
+        console.log(String(123));
+        console.log(String(123 + 4)); //string(127) = "127"
+        console.log(String(true));
+        console.log(typeof (String(true))); //string
+        console.log(String(false)); //false
+        console.log(String(123e-1)); //12.3
+        console.log(String(undefined)); //undefined
+        console.log(String(undefined)[0]); //u
+        console.log(String(null)); //null
+        console.log(String(null)[3].toUpperCase()); //L
+    </script>
+</body>
+
+</html>

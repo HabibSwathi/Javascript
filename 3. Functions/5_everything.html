@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>4. With Parameter, With Return Value</h1>
+    </center>
+    <hr>
+
+    <script>
+        function TotalOfNumbers(firstnumber, secondnumber) {
+            let total = firstnumber + secondnumber;
+
+            return total;
+        }
+
+        let output = TotalOfNumbers(500, 400);
+        console.log(TotalOfNumbers(100, 200));
+        // console.log(TotalOfNumbers(14545800, 20548780));
+
+        document.write(`<h1>${TotalOfNumbers(1,1)} </h1>`)
+        document.write(`<h1>${TotalOfNumbers(45484,4540)} </h1>`)
+
+        // AC564658468
+        // AC*******68
+
+        // let accountNumber = 'AC564658468';
+        // console.log(accountNumber[0]);
+
+
+        function formatAccountNumber(accountNumber) {
+            let output;
+            for (let i = 0; i <= accountNumber.length - 1; i++) {
+                if (i <= 1 || i >= accountNumber.length - 2) {
+                    // console.log(accountNumber[i]);
+                    output += accountNumber[i];
+                } else {
+                    // console.log('*');
+                    output += '*';
+                }
+            }
+            return output.toUpperCase();
+        }
+
+        console.log(formatAccountNumber('ta54874547854278784'));
+        console.log(formatAccountNumber('5454545478781'));
+
+        let input = prompt('enter your account number')
+
+        document.write(`<h1>${formatAccountNumber(input)}</h1>`)
+    </script>
+</body>
+
+</html>
