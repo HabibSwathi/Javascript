@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>DOM</h1>
+    </center>
+    <button onclick="closeBulkWindows()">close Multiple windows</button>
+    <button onclick="openBulkWindows()">open Multiple windows</button>
+
+    <button onclick="openWebsiteHandler()">Open a Website</button>
+    <button onclick="closeWebsiteHandler()">Close The Website</button>
+
+
+    <script>
+        var websiteHandler;
+
+        function openWebsiteHandler() {
+            websiteHandler = open('https://github.com');
+        }
+
+        function closeWebsiteHandler() {
+            websiteHandler.close();
+        }
+    </script>
+    <script>
+        var allwindows = [];
+
+        function openBulkWindows() {
+            for (let i = 0; i < 10; i++) {
+                allwindows.push(window.open('https://github.com'))
+            }
+            console.log(allwindows);
+
+        }
+
+
+        function closeBulkWindows() {
+            for (let i = 0; i < allwindows.length; i++) {
+                allwindows[i].close()
+            }
+            console.log(allwindows);
+        }
+    </script>
+</body>
+
+</html>

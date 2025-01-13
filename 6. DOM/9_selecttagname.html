@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <p>selecting multiple element by the tag name</p>
+    </center>
+
+    <p>this is the paragraph</p>
+    <p>this is the paragraph</p>
+    <p>this is the paragraph</p>
+    <p>this is the paragraph</p>
+
+
+    <script>
+        let allparagraphtag = document.getElementsByTagName('p');
+        console.log(allparagraphtag);
+
+        for (let item in allparagraphtag) {
+            console.log(allparagraphtag[item]);
+            allparagraphtag[item].style.background = 'gray';
+            allparagraphtag[item].style.padding = '10px';
+            allparagraphtag[item].setAttribute('onclick', `alertdisplay('${allparagraphtag[item].innerText}')`)
+
+        }
+
+        function alertdisplay(text) {
+            alert(text);
+        }
+    </script>
+</body>
+
+</html>

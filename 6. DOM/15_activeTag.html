@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>DOM</h1>
+        <h1>document.hasFocus() = it returns only true or false if user in facus that is true otherwise it will be false
+        </h1>
+    </center>
+    <hr>
+    <button onclick="starttest()">start test</button>
+    <button onclick="endTest()">End test</button>
+    <script>
+        var totalTime = 0;
+
+        function checkFocus() {
+            if (document.hasFocus() == true) {
+                // console.log('user is in same tab');
+
+            } else {
+                let date = new Date()
+                console.log('user is not in same tab' + date.getHours() + ':' + date.getMinutes() + ':' + date
+                    .getSeconds());
+                totalTime++;
+            }
+        }
+        var timeInterval;
+
+        function starttest() {
+            timeInterval = setInterval(checkFocus, 100); //100ms = 0.1s
+        }
+
+
+        function endTest() {
+            clearInterval(timeInterval); //clearing time (stoping function execution);
+            console.log(totalTime);
+
+        }
+    </script>
+</body>
+
+</html>

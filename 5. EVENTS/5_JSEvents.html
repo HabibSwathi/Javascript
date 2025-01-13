@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-Events</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .container {
+            min-height: 100vh;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container form {
+            width: 350px;
+            background-color: #fff;
+            padding: 30px;
+        }
+
+        .container form input,
+        .container form select {
+            width: 100%;
+            margin-bottom: 10px;
+            margin-top: 5px;
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            outline: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button[type='submit'] {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            color: #fff;
+            background-color: rgb(19, 86, 118);
+            cursor: pointer;
+        }
+
+        button[type='submit']:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <center>
+        <h1>OnChange Event</h1>
+    </center>
+    <hr> -->
+
+    <div class="container">
+        <form>
+            <label for="username">Username</label>
+            <input type="text" placeholder="Enter your name" id="username" onchange="changeHandler(event)">
+
+            <label for="gender">Gender</label>
+            <select name="gender" id="gender" onchange="changeHandler(event)">
+                <option value="" disabled selected>Please select your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <p id="error"></p>
+
+            <button type="submit" onclick="changeHandler(event)">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        let username = document.getElementById('username');
+        let gender = document.getElementById('gender');
+        let error = document.getElementById('error');
+
+
+        function changeHandler(e) {
+            e.preventDefault(); //to prevent page reload
+            console.log(username.value);
+            console.log(gender.value);
+            if (!username.value || !gender.value) {
+                error.innerHTML = '<span style="color:red">Please enter valid data</span>'
+            }
+        }
+    </script>
+
+</body>
+
+</html>

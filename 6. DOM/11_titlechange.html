@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>dom</h1>
+    </center>
+    <button onclick="upadatetitle()">update</button>
+    <script>
+        function upadatetitle() {
+            document.title = 'hello world';
+
+        }
+        let i = 0;
+
+        function increment() {
+            i++;
+            document.title = `index=${i}`
+        }
+        increment()
+        increment()
+
+        setInterval(increment, 1000)
+    </script>
+</body>
+
+</html>

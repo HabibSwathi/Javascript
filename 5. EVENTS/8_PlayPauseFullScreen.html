@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Play(), Pause() and Fullscreen() </h1>
+    </center>
+
+    <video
+        src="https://videocdn.cdnpk.net/videos/7b62b3f2-46f0-5846-aead-46235bbb7fec/horizontal/previews/clear/large.mp4?token=exp=1735887383~hmac=46480081f3739eef34c995b7ebb198cf940fd146571ead851ecea252671527ff"
+        height="300" width="200" id="video"></video>
+
+    <button onclick="playHandler()">Play</button>
+    <button onclick="pauseHandler()">Pause</button>
+    <button onclick="FullscreenHandler()">Fullscreen</button>
+
+    <div
+        style="display: flex; gap: 20px; align-items: center; width: 200px; justify-content: space-between; background-color: #ccc; border-radius: 100px; padding: 5px 10px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: auto; margin-top: 20px;">
+        <button onclick="AudioHandler()" id="btn">Play</button>
+        <h4>Example Audio</h4>
+        <a href="./audio.mp3" download="./audio.mp3">Download</a>
+    </div>
+
+    <script>
+        var video = document.getElementById('video');
+
+        function playHandler() {
+            video.play();
+        }
+
+        function pauseHandler() {
+            video.pause();
+        }
+
+        function FullscreenHandler() {
+            video.requestFullscreen();
+        }
+
+        //to create audio in js
+        let audio1 = new Audio('./audio.mp3')
+
+        let btn = document.getElementById('btn')
+
+        function AudioHandler() {
+            if (audio1.paused) {
+                audio1.play();
+                btn.innerText = 'Pause'
+            } else {
+                audio1.pause();
+                btn.innerText = 'Play'
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="test">this is the paragraph</p>
+    <h1 class="test">this is the heading</h1>
+    <h3 class="test">this is the heading3</h3>
+
+
+    <script>
+        let allclassnames = document.getElementsByClassName('test');
+
+        console.log(allclassnames);
+
+        for (let i = 0; i < allclassnames.length; i++) {
+            console.log(allclassnames[i]);
+            allclassnames[i].style.color = 'purple';
+            console.log(allclassnames[i].innerHTML);
+            // allclassnames[i].addEventListener('click',()=>{
+            //     alert(allclassnames[i].innerHTML)
+            // })
+
+            allclassnames[i].setAttribute('onclick', `displayalert()`);
+        }
+
+        function displayalert() {
+            alert('hello');
+        }
+    </script>
+</body>
+
+</html>

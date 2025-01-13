@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            background-color: #483f3f;
+
+        }
+
+        .card {
+            border: 2px solid #ccc;
+            padding: 20px;
+            background-color: darkcyan;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button onclick="addcardshandler()">add design cards</button>
+        <button onclick="removehandler()">remove card</button>
+    </header>
+    <section class="container">
+
+    </section>
+
+    <script>
+        let container = document.querySelector('.container');
+
+        function addcardshandler() {
+            container.innerHTML = `
+            <div class='card'>
+                <h2>cards</h2>
+            </div>
+            <div class='card'>
+                <h2>cards</h2>
+            </div>
+            <div class='card'>
+                <h2>cards</h2>
+            </div>
+            <div class='card'>
+                <h2>cards</h2>
+            </div>
+            <div class='card'>
+                <h2>cards</h2>
+            </div>
+            <div class='card'>
+                <h2>cards</h2>
+            </div>
+            `
+        }
+
+
+        function removehandler() {
+            container.innerHTML = `<h1 style=color:'darkcyan'>THANK YOU..!</h1>`
+        }
+    </script>
+</body>
+
+</html>

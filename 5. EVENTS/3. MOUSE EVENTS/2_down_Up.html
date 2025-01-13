@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>MOUSE EVENTS</h1>
+        <p>1. onmouseup 2. onmousedown</p>
+    </center>
+
+    <hr>
+
+    <button id="btn1" onmousedown="downHandler()" onmouseup="upHandler()">Button</button>
+
+    <script>
+        let btn1 = document.getElementById('btn1');
+
+        function downHandler() {
+            btn1.style.background = "red";
+            btn1.style.color = "#fff";
+        }
+
+        function upHandler() {
+            btn1.style.background = "";
+            btn1.style.color = "";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onresize="resizeHandler()">
+    <center>
+        <h1>OnResize event</h1>
+    </center>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse sint dignissimos laudantium eligendi earum
+        exercitationem autem ex in dicta eius dolorem repudiandae veniam iure, obcaecati pariatur rem dolores aspernatur
+        hic.</p>
+
+    <script>
+        var storage
+        localStorage.setItem('html', document.body.innerHTML)
+        localStorage.setItem('isVisited', false)
+
+        function resizeHandler() {
+            console.log('user is resizing the window..!');
+            console.log('width of the websote = ', screen.availWidth);
+            if (screen.availWidth <= 576) {
+                document.body.style.backgroundColor = 'red';
+                if (document.body.innerHTML != `<h1>This website is not available in mobiles!</h1>`) {
+                    if (localStorage.getItem('isVisited') != true) {
+                        localStorage.getItem('html', document.body.innerHTML)
+                        localStorage.getItem('isVisited', true)
+                    }
+                }
+                document.body.innerHTML = `<h1>This website is not available in mobiles!</h1>`
+            } else {
+                localStorage.setItem('isVisited', false)
+                document.body.style.backgroundColor = '';
+                document.body.innerHTML = localStorage.getItem('html')
+            }
+        }
+        resizeHandler();
+    </script>
+</body>
+
+</html>

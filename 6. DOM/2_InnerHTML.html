@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #card1 {
+            width: 300px;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-shadow: 0px 0px 10px #ccc;
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        #card1 img {
+            width: 100%;
+            border-radius: 10px;
+
+        }
+
+        #card button {
+            width: 100%;
+            border: none;
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+
+        #card2 {
+            width: 300px;
+            margin: auto;
+            margin-top: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0c0c0c;
+            color: #ffff;
+            padding: 30px;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>innerHTML and innertext to add the content</h1>
+        <p>we can use .innerHTML to insert any html elements to inside any html elements and we can use .innertext to
+            insert the content into any html elements</p>
+    </center>
+    <hr>
+
+
+    <div id="card1">
+
+    </div>
+    <div id="card2">
+
+    </div>
+    <h1 id="heading"></h1>
+    <p id="subtitle"></p>
+    <script>
+        let card1 = document.getElementById('card1');
+        let card2 = document.getElementById('card2');
+
+
+        let headingtag = document.getElementById('heading')
+        let pragraphtag = document.getElementById('subtitle')
+
+
+
+
+        // inserting html elements using .innerHtml
+        card1.innerHTML = `
+     <img src="https://tse4.mm.bing.net/th?id=OIP.HxV79tFMPfBAIo0BBF-sOgHaEy&pid=Api&P=0&h=180" alt="Loading....!">
+      <h4>This  is the card heading</h4>
+      <p>this the content of the card</p>
+      <button>Know more</button>
+     `
+
+        card2.innerHTML = '<h1> This is the heading tag inside the card2 from js program</h1>'
+
+        //inserting text or content using .innertext
+        headingtag.innertext = 'This is the text from js program';
+        pragraphtag.innertext =
+            'we can use. innerHTML to insert any html elements to inside any html elements and wecan use.innertext to insert the content into any html elements'
+    </script>
+</body>
+
+</html>

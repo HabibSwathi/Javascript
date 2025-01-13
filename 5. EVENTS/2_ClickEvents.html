@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js-Events</title>
+</head>
+<body>
+    <center>
+        <h1>Click Events(Button Events)</h1>
+    </center>
+    <hr>
+
+    <button onclick="generateTable()">Single click</button>
+    <button ondblclick=" displayAlert('hello how are you?')">Double click</button>
+    <button onclick="sumOfNumbers(10, 20, addition)">Addition</button>
+    <button onclick="sumOfNumbers(980, 20, subtraction)">subtraction</button>
+    <button onclick="sumOfNumbers(10, 20, multiplication)">multiplication</button>
+    <button onclick="sumOfNumbers(10, 20, division)">division</button>
+    <button onclick="sumOfNumbers(10, 20, hjhh)">invalid operator</button>
+    <h1 id="result"></h1>
+    <hr>
+
+    <table border="1" cellpadding="15" cellspacing="0" id="table1">
+        <tr>
+            <th>Table</th>
+        </tr>
+    </table>
+
+    <script>
+        let table1 = document.getElementById('table1');
+        let result = document.getElementById('result');
+        function generateTable(){
+            for(let i=1; i<=10; i++){
+                table1.innerHTML += `
+                    <tr>
+                        <td>2 * ${i} = ${2*i}</td>
+                    </tr>
+                `
+            }
+        }
+        // generateTable()
+
+        function displayAlert(message){
+            alert(message);
+        }
+        // displayAlert('hello how are you?')
+    </script>
+
+    <script>
+        function sumOfNumbers(a, b, opearator){
+            switch (opearator) {
+                case 'addition':
+                    result.innerText = a+b
+                    break;
+                case 'subtraction':
+                    result.innerText = a-b
+                    break;
+                case 'multiplication':
+                    result.innerText = a*b
+                    break;
+                case 'division':
+                    result.innerText = a/b
+                    break;
+            
+                default:
+                    result.innerHTML = <span style="color:red">Please send valid operator</span>
+                    break;
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>innerHTML and innerText</h1>
+        <p>getting any html elemnet and any content from the any element using the innerHTML and innerText</p>
+    </center>
+
+    <button id="btn1">This is the button1</button>
+    <button id="btn2">This is the button2</button>
+    <button id="btn3">This is the button3</button>
+    <button id="btn4">This is the button4</button>
+
+    <div id="result">
+
+    </div>
+    <script>
+        let btn1 = document.getElementById(btn1);
+        let btn2 = document.getElementById(btn2);
+        let btn3 = document.getElementById(btn3);
+        let btn4 = document.getElementById(btn4);
+
+        let result = document.getElementById("result");
+
+        console.log(btn1.innerHTML);
+        console.log(btn1.innerText);
+
+        result.innerHTML = `
+        <h1>The content of button1 = ${btn1.innerText}</h1>
+        <h1>The content of button2 = ${btn2.innerText}</h1>
+        <h1>The content of button3 = ${btn3.innerText}</h1>
+        <h1>The content of button4 = ${btn4.innerText}</h1>
+
+        `
+    </script>
+
+</body>
+
+</html>

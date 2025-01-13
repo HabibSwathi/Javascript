@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-Events</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .container {
+            min-height: 100vh;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .container form {
+            width: 350px;
+            background-color: #fff;
+            padding: 30px;
+        }
+
+        .container form input,
+        .container form select {
+            width: 100%;
+            margin-bottom: 10px;
+            margin-top: 5px;
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            outline: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button[type='submit'] {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            color: #fff;
+            background-color: rgb(19, 86, 118);
+            cursor: pointer;
+        }
+
+        button[type='submit']:hover {
+            opacity: 0.7;
+        }
+
+        input[type='checkbox'] {
+            width: fit-content !important;
+        }
+
+        table {
+            border-collapse: collapse;
+            background-color: #fff;
+            width: 80%;
+        }
+
+        td,
+        th {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+
+        }
+
+        td img {
+            width: 80px;
+            height: 80px;
+            padding: 5px;
+            border: 3px solid rgb(19, 86, 118);
+            border-radius: 100px;
+        }
+
+        th {
+            background-color: rgb(19, 86, 118);
+            color: #fff;
+        }
+
+        input[type='color'] {
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <center>
+        <h1>onSubmit and onReset Event</h1>
+    </center>
+    <hr> -->
+
+    <div class="container">
+        <form onsubmit="submitHanlder(event)" onreset="resetHandler()">
+            <label for="username">Username</label>
+            <input type="text" placeholder="Enter your name" id="username">
+
+            <label for="url">Profile url</label>
+            <input type="url" placeholder="https;//example.com" id="profile"
+                value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlzoTsv6UidHmNWFtyPJGqDtd71k-hDbmRdw&s">
+            <label for="">background color</label>
+            <input type="color" id="bgcolor">
+
+            <label for="">text color</label>
+            <input type="color" id="textcolor">
+
+            <label for="password">Password</label>
+            <input type="password" placeholder="Enter your password" id="password">
+            <label for="pass">
+                <input type="checkbox" onclick="PasswordHanlder()">
+                <span id="log">Show password</span>
+            </label>
+            <br>
+
+            <label for="gender">Gender</label>
+            <select name="gender" id="gender">
+                <option value="" disabled selected>Please select your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <p id="error"></p>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+
+        <table id="table" align="center">
+            <tr>
+                <th>Profile</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Gender</th>
+                <th>Action</th>
+            </tr>
+            <!-- 
+            <tr>
+                <td></td>
+            </tr> -->
+        </table>
+    </div>
+
+    <script>
+        let username = document.getElementById('username');
+        let gender = document.getElementById('gender');
+        let error = document.getElementById('error');
+        let password = document.getElementById('password'); //input
+        let log = document.getElementById('log');
+        let profile = document.getElementById('profile');
+        let bgcolor = document.getElementById('bgcolor');
+        let textcolor = document.getElementById('textcolor');
+
+        let table = document.getElementById('table');
+
+
+        function PasswordHanlder() {
+            console.log(password.type);
+
+            if (password.type == 'password') {
+                password.type = 'text'; //changing that input type to text if that type is already a password
+                log.innerText = 'Hide Password'
+            } else {
+                password.type = 'password';
+                log.innerText = 'Show Password'
+            }
+
+        }
+
+        function submitHanlder(e) {
+            e.preventDefault(); //prevents reload
+
+
+            var user = {
+                user_name: username.value,
+                user_password: password.value,
+                user_gender: gender.value,
+                profile_url: profile.value,
+                bg_color: bgcolor.value,
+                text_color: textcolor.value
+            }
+            console.log(user);
+
+            table.innerHTML += `
+                <tr>
+                    <td style='background-color:${user.bg_color}; color:${user.text_color}'><img src=${user.profile_url} alt="please wait..."></td>
+                    <td style='background-color:${user.bg_color}; color:${user.text_color}'>${user.user_name}</td>
+                    <td style='background-color:${user.bg_color}; color:${user.text_color}'>${user.user_password}</td>
+                    <td style='background-color:${user.bg_color}; color:${user.text_color}'> ${user.user_gender}</td>
+                    <td style='background-color:${user.bg_color}; color:${user.text_color}'><button onclick='viewhandler(${JSON.stringify(user)})'>View</button></td>
+                </tr>
+            `
+
+
+
+        }
+
+
+        function resetHandler() {
+            alert('user is resetted the form')
+        }
+
+        function viewhandler(userdata) {
+            // console.log(JSON.parse(userdata));//jsonn to object using json.parse(json_variable)
+            // const user = JSON.parse(userdata);//object
+
+            alert('username = ' + userdata.user_name)
+            alert('gender = ' + userdata.user_gender)
+            alert('password = ' + userdata.user_password)
+            alert('profile = ' + userdata.profile_url)
+
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>queryselector</h1>
+        <p>by using this method we can select the tag by using that tag name and that tag id and class names</p>
+    </center>
+
+    <h1 id="heading1">this is the heading</h1>
+    <h3 class="result">this is the result</h3>
+    <p class="subtitle">this is the paragraph</p>
+    <h5>this is the heading5</h5>
+
+
+    <script>
+        //selecting elem with the id using queryselector
+        //let heading=document.queryselector('h1#hedaing1')
+        let heading = document.querySelector('#heading1');
+        console.log(heading);
+        console.log(heading.innerHTML);
+
+        //selecting elements using class name
+        //let result=document.queryselctor('h3.result');
+        let result = document.querySelector('.result');
+        console.log(result);
+        result.style.color = 'blue'
+
+
+        //selecting elem using tag name
+        let h5tag = document.querySelector('h5')
+        console.log(h5tag);
+        console.log(h5tag.innerText);
+        h5tag.style.background = '#0c560c'
+        h5tag.style.padding = '20px'
+        h5tag.style.color = '#fff'
+    </script>
+</body>
+
+</html>

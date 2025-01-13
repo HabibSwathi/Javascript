@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <center>
+        <h1>WIndow Popup</h1>
+    </center>
+    <hr>
+
+    <button onclick="singlePopupHanlder()">Open single popup window</button>
+    <button onclick="closeSingleWIndow()">Close single popup window</button>
+
+
+    <hr>
+    <button onclick="OpneBulkPopups()">Open Multiple Popup windows</button>
+    <button onclick="CloseBulkPopups()">Close Multiple Popup windows</button>
+
+    <script>
+        var websitehanlder;
+
+        function singlePopupHanlder() {
+            websitehanlder = window.open('https://github.com', 'Github', 'width=100, height=100, left=300, top=300')
+        }
+
+        function closeSingleWIndow() {
+            websitehanlder.close()
+        }
+    </script>
+
+
+    <script>
+        var bulkPopups = [];
+
+        function OpneBulkPopups() {
+            for (let i = 0; i < 10; i++) {
+                bulkPopups.push(window.open('https://github.com', 'Github', 'width=300, height=300'));
+                console.log(bulkPopups);
+            }
+        }
+
+        function CloseBulkPopups() {
+            for (let i = 0; i < bulkPopups.length; i++) {
+                bulkPopups[i].close()
+                console.log(bulkPopups);
+            }
+        }
+    </script>
+</body>
+
+</html>

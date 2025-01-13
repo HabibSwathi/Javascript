@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="head">
+
+    </h2>
+    <input type="text" name="name" id="name" placeholder="name">
+
+    <script>
+        let headingtag = document.getElementById('head');
+        let inputtag = document.getElementById('name');
+
+        inputtag.style.padding = '20px';
+        inputtag.style.border = 'none';
+        inputtag.style.outline = 'none';
+        inputtag.style.border = '1px solid #ccc';
+        inputtag.style.width = '300px';
+
+        //getting attributes
+        console.log(inputtag.getAttribute('id'));
+        console.log(inputtag.getAttribute('style'));
+
+        //method1: setting values to attribute we need 2 parameters (attribute_name,attribute_value)
+        inputtag.setAttribute('title', 'enter the name');
+        inputtag.setAttribute('placeholder', 'enter the username');
+
+
+        //method2:
+        inputtag.title = 'enter the name';
+        inputtag.placehonder = 'username';
+
+        headingtag.style.width = '200px'
+        headingtag.style.height = '200px'
+        headingtag.style.border = '2px solid #0c0c0c'
+        headingtag.style.borderRadius = '20px'
+        headingtag.style.background = '#ccc'
+
+        headingtag.innerHTML = '<h1>HEAD</h1>'
+    </script>
+</body>
+
+</html>

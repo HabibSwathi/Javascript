@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #text {
+            width: 400px;
+            padding: 20px;
+            text-align: justify;
+            line-height: 1.7;
+            height: 500px;
+            overflow: auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border: 2px solid #ccc;
+            margin: auto;
+        }
+
+        img {
+            width: 80px;
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>MOUSE EVENTS</h1>
+        <p>1. onmouse 2. onscroll</p>
+    </center>
+
+    <hr>
+
+    <div id="text" onscroll="onScrollHandler()">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse dolore numquam atque maiores exercitationem
+            soluta error quaerat. Aut tempora aperiam quam suscipit impedit a iste, perferendis vero nostrum molestias
+            modi!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse dolore numquam atque maiores exercitationem
+            soluta error quaerat. Aut tempora aperiam quam suscipit impedit a iste, perferendis vero nostrum molestias
+            modi!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse dolore numquam atque maiores exercitationem
+            soluta error quaerat. Aut tempora aperiam quam suscipit impedit a iste, perferendis vero nostrum molestias
+            modi!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse dolore numquam atque maiores exercitationem
+            soluta error quaerat. Aut tempora aperiam quam suscipit impedit a iste, perferendis vero nostrum molestias
+            modi!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse dolore numquam atque maiores exercitationem
+            soluta error quaerat. Aut tempora aperiam quam suscipit impedit a iste, perferendis vero nostrum molestias
+            modi!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse dolore numquam atque maiores exercitationem
+            soluta error quaerat. Aut tempora aperiam quam suscipit impedit a iste, perferendis vero nostrum molestias
+            modi!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse dolore numquam atque maiores exercitationem
+            soluta error quaerat. Aut tempora aperiam quam suscipit impedit a iste, perferendis vero nostrum molestias
+            modi!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse dolore numquam atque maiores exercitationem
+            soluta error quaerat. Aut tempora aperiam quam suscipit impedit a iste, perferendis vero nostrum molestias
+            modi!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse dolore numquam atque maiores exercitationem
+            soluta error quaerat. Aut tempora aperiam quam suscipit impedit a iste, perferendis vero nostrum molestias
+            modi!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse dolore numquam atque maiores exercitationem
+            soluta error quaerat. Aut tempora aperiam quam suscipit impedit a iste, perferendis vero nostrum molestias
+            modi!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse dolore numquam atque maiores exercitationem
+            soluta error quaerat. Aut tempora aperiam quam suscipit impedit a iste, perferendis vero nostrum molestias
+            modi!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse dolore numquam atque maiores exercitationem
+            soluta error quaerat. Aut tempora aperiam quam suscipit impedit a iste, perferendis vero nostrum molestias
+            modi!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse dolore numquam atque maiores exercitationem
+            soluta error quaerat. Aut tempora aperiam quam suscipit impedit a iste, perferendis vero nostrum molestias
+            modi!</p>
+    </div>
+
+    <button onclick="onScrollIncrement()">Increment Scroll</button>
+    <button onclick="onScrollDecrement()">Decrement Scroll</button>
+    <img src="https://cdn-icons-png.freepik.com/256/8365/8365973.png?semt=ais_hybrid" alt="" onclick="scrolltopHandler">
+
+    <script>
+        let textDiv = document.getElementById('text');
+
+        function onScrollHandler() {
+            console.log('user is scrolling in div');
+            console.log(textDiv.scrollTop);
+        }
+
+        function scrolltopHandler() {
+            textDiv.scrollTop = 0;
+        }
+
+        function onScrollIncrement() {
+            textDiv.scrollTop = textDiv.scrollTop + 10;
+        }
+
+        function onScrollDecrement() {
+            textDiv.scrollTop = textDiv.scrollTop - 10;
+        }
+    </script>
+</body>
+
+</html>

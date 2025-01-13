@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="marks" title="heading">
+        <span>76</span>
+    </h1>
+    <p id="subtitle" title="subtitle">this is the paragraph</p>
+
+    <script>
+        //selecting html elem and storing inside the variables
+        let marks = document.getElementById('marks');
+        let subtitle = document.getElementById('subtitle');
+        //after selecting we can use that tag inside the js
+        //getting that innerhtml and innertext
+        //setting new innerhtml and innertext
+        //we can get any attribute from this selected tag or elem
+        //we can apply style to that selected tags
+        //and set a new attribute and change the attribute value
+        //and remove the classnames from the selected tags
+        //we can set new class names or add new class names to the selected html elem
+
+        //1)getting that innerhtml and innertext
+        console.log('inner html from the h1 tag of the id=', marks.innerHTML);
+        console.log('inner text from the selected subtitle p tag', subtitle.innerHTML);
+
+        //2)setting new innerhtml and innertext
+        marks.innerHTML = '<p>this is the paragraph</p>';
+        console.log('inner html from the h1 tag of the id=', marks.innerHTML);
+
+        //innertext adding
+        subtitle.innerHTML = 'hello world...!';
+        console.log('inner text from the selected subtitle p tag', subtitle.innerHTML);
+
+
+        // 3)we can get any attribute from this selected tag or elem
+        //printing attribute value using 2 methods
+        //from the h1 tag
+
+        console.log(marks.getAttribute('id'));
+        console.log(marks.id);
+        console.log(marks.getAttribute('title'));
+        console.log(marks.title);
+
+        //from the p tag
+        console.log(subtitle.getAttribute('id'));
+        console.log(subtitle.id);
+        console.log(subtitle.getAttribute('title'));
+        console.log(subtitle.title);
+
+
+        //4) we can apply style to that selected tags
+        marks.style.color = 'red';
+        marks.style.background = 'black'
+        subtitle.style.background = 'yellow'
+        subtitle.style.fontSize = '3rem'
+
+
+        //5) and set a new attribute and change the attribute value
+        //adding new attribute inside the html element
+        marks.setAttribute('class', "heading"); //setattribute(attributename,value-of-the-attribute )
+        subtitle.setAttribute('class', "paragraph");
+        subtitle.setAttribute('style', "color:blue;");
+    </script>
+</body>
+
+</html>

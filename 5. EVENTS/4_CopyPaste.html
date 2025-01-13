@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            min-height: 100vh;
+        }
+
+        .left textarea {
+            width: 100%;
+            height: 60vh;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            font-size: 1.4rem;
+            color: rgb(0, 253, 194);
+            letter-spacing: 2px;
+            padding: 30px;
+            font-weight: 900;
+        }
+
+        .left {
+            min-height: 60vh;
+            background-color: #1d1d1d;
+        }
+
+        .logs {
+            height: 40vh;
+            background-color: #0c0c0c;
+            overflow: auto;
+        }
+
+        .logs header {
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .logs p {
+            color: red;
+            font-size: 1.3rem;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <div class="left">
+            <textarea name="" id="" onselect="selectChecked()" oncut="cutHandler()" oncopy="copyHandler()"
+                onpaste="pasteHandler()"></textarea>
+        </div>
+        <div class="logs">
+            <header>
+                <h3>Logs</h3>
+                <button onclick="clearHandler()">Clear Logs</button>
+            </header>
+            <p id="result"></p>
+        </div>
+    </section>
+
+    <script>
+        let result = document.getElementById('result');
+
+        function selectChecked() {
+            result.innerHTML += 'User is selected the text in code space area <br>'
+        }
+
+        function clearHandler() {
+            result.innerHTML = " ";
+        }
+
+        function cutHandler() {
+            result.innerHTML += 'User is cut the text in code space area <br>'
+        }
+
+        function pasteHandler() {
+            let date = new Date();
+            // result.innerHTML += 'User is Pasted the text in code space area <br>'
+            result.innerHTML +=
+                `User has pasted the text in code space area ${date.getHours()}H : ${date.getMinutes()}M : ${date.getSeconds()}S <br>`
+        }
+
+        function copyHandler() {
+            result.innerHTML += 'User is copied the text in code space area <br>'
+        }
+    </script>
+</body>
+
+</html>
