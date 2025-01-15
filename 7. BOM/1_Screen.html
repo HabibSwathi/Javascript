@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>BOM</h1>
+
+    </center>
+
+    <button onclick="getResolutions()">Get Resolutions</button>
+    <script>
+        function getResolutions() {
+            document.write(`<h1>Screen Width : ${screen.width}</h1>`)
+            document.write(`<h1>Screen Height : ${screen.height}</h1>`)
+
+            document.write(`<h1>Screen available Width : ${screen.availWidth}</h1>`)
+            document.write(`<h1>Screen available Height : ${screen.availHeight}</h1>`)
+
+        }
+        console.log(screen); //it will return all the properties of screen object, it is an object
+
+        //printing all rhe properties of screen object using for in loop
+        for (let key in screen) {
+            console.log(key); //key variable reads all the object keys
+            //to get value of key we use screen[key]
+            //console.log(screen.key); //it will not work
+            console.log(screen[key]); //objectname[key] = objectname.key
+
+            document.write(
+                `<h1>Screen <span style="color:red">${key}</span> : <span style = "color:green"><u>${screen[key]}</u></span></h1>`
+            )
+        }
+    </script>
+</body>
+
+</html>
