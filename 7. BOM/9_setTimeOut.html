@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+
+<body>
+    <center>
+        <h1>BOM - setTimeOut() to execute anything in js after some time</h1>
+    </center>
+
+    <h1 id="result">Count 0</h1>
+
+    <script>
+        // function displayAlert(){
+        //     alert('hi');
+        // }
+        // // displayAlert()
+        // setTimeout(displayAlert, 5000);  //5000ms = 5s after 5s the function will be execute
+
+        var result = document.getElementById('result');
+        var count = 0;
+
+        function incrementCount() {
+            count++;
+            console.log(count);
+            result.innerText = `Count ${'count'}`
+        }
+        // console.log(count);//0
+        // incrementCount();//count++ = 0+1 = 1
+        // console.log(count);//1
+        // incrementCount();//count++ = 1+1 = 2
+        // console.log(count);//2
+
+        var intervalHandler;
+
+        function startInterval() {
+            intervalHandler = setInterval(incrementCount, 1000);
+        }
+
+
+        setTimeout(startInterval, 5000) //executing function after 5s seconds
+    </script>
+
+</body>
+
+</html>

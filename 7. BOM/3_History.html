@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+
+<body>
+    <center>
+        <h1>BOM</h1>
+    </center>
+    <hr>
+    <button onclick="getViews()">Get Views </button>
+    <button onclick="goBack()">Go back</button>
+    <button onclick="refresh()">Refresh</button>
+    <button onclick="goForword()">Go Forword</button>
+
+    <br>
+    <button onclick="goTofirstPage()">Go Back 2 Pages</button>
+    <button onclick="goTo1PageBack()">Go back 1 pages</button>
+    <button onclick="gotoSamePage">Go to same page</button>
+    <button onclick="goForword1Page()">Go to 1 page forword</button>
+
+    <script>
+        function getViews() {
+            document.write( < h1 > You 're accessed  = ${history.length}</h1>)
+            }
+
+            function goBack() {
+                window.history.back()
+            }
+
+            function goForword() {
+                history.forward();
+            }
+
+            function refresh() {
+                window.location.reload();
+            }
+
+            function goTofirstPage() {
+                window.history.go(-2); //go back 2 pages
+            }
+
+            function goTo1PageBack() {
+                window.history.go(-1); //go back 1 pages
+            }
+
+            function goForword1Page() {
+                window.history.go(1); //got forword 1 page
+            }
+
+            //window.history.go(0); //reloads the current page
+            function gotoSamePage() {
+                window.history.go(0)
+            }
+            //-1, -2, -3 0 1, 2, 3 +ve are the forword pages and -ve are the backside pages
+    </script>
+
+</body>
+
+</html>

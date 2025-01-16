@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>BOM = Opening and closing a window</h1>
+    </center>
+
+    <button onclick="openWindow()">Open Window</button>
+    <button onclick="closeHandler()">Close Close</button>
+
+    <script>
+        var windowOpenhalder;
+
+        function openWindow() {
+            //to open a window popup in same tab we can pass some windowProperties
+            // windowOpenhalder = window.open('https://github.com', "", 'width=300,height=300,top=200,left=300, toolbal=yes,scrollable=yes,resizable=yes')
+
+            //to open new windiw
+            windowOpenhalder = window.open('https://github.com')
+        }
+
+        function closeHandler() {
+            windowOpenhalder.close();
+        }
+    </script>
+</body>
+
+</html>

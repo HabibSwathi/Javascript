@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+    <style>
+        .status {
+            text-align: center;
+            padding: 4px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="status"></div>
+    <center>
+        <h1>BOM</h1>
+        <p>getting browser Information and OS information using navigator object</p>
+    </center>
+
+    <hr>
+
+
+    <script>
+        console.log(navigator); //object
+
+        document.write(`<h1>navigator.appName = ${navigator.appName}</h1>`)
+        document.write(`<h1>navigator.appCodeName = ${navigator.appCodeName}</h1>`)
+        document.write(`<h1>navigator.appVersion = ${navigator.appVersion}</h1>`)
+        document.write(`<h1>navigator.cookieEnabled = ${navigator.cookieEnabled}</h1>`)
+        document.write(`<h1>navigator.userAgent = ${navigator.userAgent}</h1>`)
+        document.write(`<h1>navigator.language = ${navigator.language}</h1>`)
+        document.write(`<h1>navigator.languages = ${navigator.languages}</h1>`) //array
+        document.write(`<h1>navigator.languages[0] = ${navigator.languages[0]}</h1>`) //array[0]
+        document.write(`<h1>navigator.languages[1] = ${navigator.languages[1]}</h1>`) //array[1]
+        document.write(`<h1>navigator.platform = ${navigator.platform}</h1>`)
+        document.write(`<h1>navigator.onLine = ${navigator.onLine}</h1>`) //boolean it return only true or false
+
+
+        //chcking network connection
+        function CheckingOnline() {
+            var statusOnline = document.querySelector('.status');
+            if (navigator.onLine == true) {
+                statusOnline.innerText = 'Online'
+                statusOnline.style.backgroundColor = 'green'
+                statusOnline.style.color = 'white'
+            } else {
+                statusOnline.innerText = 'Offline'
+                statusOnline.style.backgroundColor = 'red'
+                statusOnline.style.color = 'white'
+            }
+        }
+
+        // CheckingOnline();
+
+        var intervalHandler = setInterval(CheckingOnline, 1000);
+    </script>
+</body>
+
+</html>

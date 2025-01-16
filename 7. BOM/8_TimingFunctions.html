@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>BOM: Timing Functions (setInterval(function, time in ms), setTimeOut(functionName, time in ms),
+            clearInterval(variable name), clearTimeOut(variable name))</h1>
+    </center>
+
+    <hr>
+    <button onclick="startInterval()">Start Interval</button>
+    <button onclick="stopInterval()">Stop Interval</button>
+    <p class="text"></p>
+    <script>
+        let text = document.querySelector('.text');
+
+        function printHi() {
+            text.innerHTML += '<h3>Hi</h3>'
+        }
+
+        var intervalhandler; //declartion
+        function startInterval() {
+            //to execute anything in code everytime we can use setInterval
+            intervalhandler = setInterval(printHi, 1000); //100ms = 1s //(functionName, time in ms)
+        }
+
+        function stopInterval() {
+            //where we atarted interval that varaiable inside the clearInterval Method
+            clearInterval(intervalhandler)
+        }
+    </script>
+</body>
+
+</html>

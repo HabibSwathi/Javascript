@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+
+<body>
+    <center>
+        <h1>BOM DIALOG BOXES (alert, confirm, prompt)</h1>
+    </center>
+    <hr>
+    <button onclick="DisplayAlertDisalog()">Display Alert Message</button>
+
+    <button onclick="displayCOnfirmationDIalog()">Delete</button>
+
+    <script>
+        function DisplayAlertDisalog() {
+            // alert('hello this is the alert dialog box')
+            let firstname = 'Arun kumar';
+            alert(firstname)
+            alert(1 + 1)
+        }
+
+        //confirm dialog box to get confirmation from the user it display 2 buttons ok and cancel if user clicks the ok that is true and if clicks cancel that false
+        function displayCOnfirmationDIalog() {
+            if (confirm('Do you want to delete the image')) {
+                //if user clicks the ok button (confirm) this will execute
+                alert('user clicked the ok button');
+                console.log('ok');
+            } else {
+                //if user clicks cancel button this part will be execute
+                console.log('user clicked the cancel');
+                alert('user clicked the cancel button');
+
+            }
+        }
+
+        //prompt to get input from the user we can use this and if we get any input from prompt dialog it will be string formate
+
+        // let userName = "Arun"; //mannual 
+        //getting string values
+        let userName = prompt('enter your name'); //user enetered value will strore inside the userName variable
+        console.log(userName);
+
+        // //getting numbers from userInput
+        // let firstNumber = prompt('enter firstnumber'); //string
+        // let secondNumber = prompt('enter secondnumber')//string
+        // let total = firstNumber +secondNumber;//string + string = string example:1+1 = 11
+        // console.log(total);
+
+        //getting numbers from userInput
+        let firstNumber = Number(prompt('enter firstnumber')); //number
+        let secondNumber = Number(prompt('enter secondnumber')) //stnumberring
+        let total = firstNumber + secondNumber; //number + number = number example:1+1 = 2
+        console.log(total);
+    </script>
+</body>
+
+</html>

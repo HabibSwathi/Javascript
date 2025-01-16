@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+    <style>
+        .status {
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="status"></div>
+    <center>
+        <h1>BOM</h1>
+    </center>
+
+    <button onclick="getURL()">Get Page URL</button>
+    <button onclick="setURl()">Set Page URL</button>
+
+    <button onclick="gotoGithub()">Go to github</button>
+
+    <button onclick="reloadThePage()">Reload the page</button>
+
+    <button onclick="assaignNewURL()">Assaign a new URL</button>
+    <script>
+        console.log(window);
+
+
+        function getURL() {
+            document.write(`The URL of this page is: $ {
+                window.location.href
+            }`)
+        }
+
+        function setURl() {
+            window.location.href = './p1.html'
+        }
+
+        function gotoGithub() {
+            ;
+            window.location.href = 'https://www.github.com'
+        }
+
+        console.log(window.location);
+
+        function reloadThePage() {
+            window.location.reload()
+        }
+
+
+        document.write(`<p>PathName ${window.location.pathname}</p>`)
+        document.write(`<p>Host ${window.location.host}</p>`)
+        document.write(`<p>Hostname ${window.location.hostname}</p>`)
+        document.write(`<p>Port ${window.location.port}</p>`)
+
+
+        if (window.location.pathname == '/p1.html') {
+            document.body.innerHTML = `<div class="status"></div> <h1>the p2.html webpage we can't load</h1>`
+        }
+        //checking website is secure or not by using protocol in location object if it is https then it is secure or http the it is not secure
+
+        let status = document.querySelector('.status');
+        if (window.location.protocol == 'http:') {
+            //not a secure
+            status.innerText = 'This website is not secured';
+            status.style.backgroundColor = 'red'
+            status.style.color = 'white'
+        } else {
+            status.innerText = 'This website is  secured'
+            status.style.backgroundColor = 'green'
+            status.style.color = 'white'
+        }
+
+
+        function assaignNewURL() {
+            window.location.assign('https://facebook.com')
+        }
+    </script>
+</body>
+
+</html

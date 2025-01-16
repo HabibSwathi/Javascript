@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            min-height: 100vh;
+            background-color: rgb(57, 25, 236);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            width: 300px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.233);
+            backdrop-filter: blur(90px);
+            border-radius: 5px;
+            border-bottom: 5px solid #ffffff96;
+        }
+
+        .btns {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btns button {
+            flex: 1;
+            background-color: #fff;
+            border: none;
+            padding: 5px;
+            color: rgb(57, 25, 236);
+            text-transform: uppercase;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .btns button:hover {
+            opacity: 0.9;
+        }
+
+        .btns button:active {
+            transform: scale(0.9);
+        }
+
+        #time {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #ffffff57;
+            border-radius: 10px;
+            color: #fffffff5;
+        }
+
+        h3 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        #flags {
+            max-height: 100px;
+            overflow: auto;
+            background-color: #ffffff57;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        #flags li {
+            padding: 6px;
+            background-color: #ffffff96;
+            margin-bottom: 5px;
+            color: rgb(57, 25, 236);
+            font-weight: 600;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h3>Stopwatch</h3>
+            <hr>
+            <br>
+            <h1 id="time"><span id="minutes">00</span>:<span id="seconds">00</span>:<span id="milliseconds">00</span>
+            </h1>
+            <div class="btns">
+                <button onclick="startInterval()">Start</button>
+                <button onclick="addFlag()">flag</button>
+                <button onclick="stopInterval()">Stop</button>
+            </div>
+            <ul id="flags"></ul>
+        </div>
+    </div>
+
+
+    <script>
+        var timeHeading = document.getElementById('time');
+        var seconds = document.getElementById('seconds');
+        var milli_seconds = document.getElementById('milliseconds');
+        var minutes = document.getElementById('minutes');
+        var flagList = document.getElementById('flags');
+
+        let currentSeconds = 0;
+        let currentMilliSeconds = 0;
+        let currentMinutes = 0;
+
+        function startTimeHandler() {
+            if (currentMilliSeconds >= 100) {
+                currentMilliSeconds = 0;
+                if (currentSeconds >= 60) {
+                    currentSeconds = 0;
+                    currentMinutes++;
+                } else {
+                    currentSeconds++;
+                }
+            } else {
+                currentMilliSeconds++;
+            }
+
+
+
+            //   if(currentSeconds<10){
+            //    seconds.innerText = '0'+currentSeconds;
+            //   }else{
+            //    seconds.innerText = currentSeconds;
+            //   }
+
+
+            //   if(currentMilliSeconds<10){
+            //     milli_seconds.innerText ='0'+currentMilliSeconds
+
+            //   }else{
+            //     milli_seconds.innerText = currentMilliSeconds;
+            //   }
+
+
+            //   if(currentMinutes<10){
+            //     minutes.innerText = '0'+currentMinutes;
+            //   }else{
+            //     minutes.innerText = currentMinutes;
+            //   }
+
+            if (currentSeconds > 0 && currentSeconds < 10 || currentMilliSeconds > 0 && currentMilliSeconds < 10 ||
+                currentMinutes > 0 && currentMinutes < 10) {
+                seconds.innerText = '0' + currentSeconds
+                milli_seconds.innerText = '0' + currentMilliSeconds
+                minutes.innerText = '0' + currentMinutes
+            } else {
+                seconds.innerText = currentSeconds
+                milli_seconds.innerText = currentMilliSeconds
+                minutes.innerText = currentMinutes
+            }
+        }
+        var intrvalhanlder;
+
+        function startInterval() {
+            intrvalhanlder = setInterval(startTimeHandler, 1);
+        }
+
+        function stopInterval() {
+            clearInterval(intrvalhanlder);
+        }
+
+        var count = 0;
+
+        function addFlag() {
+            count++
+            flagList.innerHTML += `
+            <li>${count}) ${timeHeading.innerText}</li>
+        `
+        }
+    </script>
+</body>
+
+</html>
