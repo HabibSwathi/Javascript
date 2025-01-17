@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Arrays</h1>
+    </center>
+    <hr>
+
+    <h1>Creating array using Constructor with parameters</h1>
+
+    <hr>
+
+    <script>
+        //   let colors = ['red', 'green', 'blue', 'orange', 'gold', 'black'];  //literal type
+        //let colors = new Array(); // constructor method
+
+        //but here we gonna create a array  by using constructor with parameter
+        let colors = new Array('red', 'green', 'blue', 'orange', 'gold',
+            'black'); // passing parameters on arrat creating time in Array() constructor
+
+        //Array() constructor is builtin keyword in js or builtin method
+        //when we using any constructor we need to use before new keyword for that constructor
+
+        console.log('length = ', colors.length);
+        console.log('value = ', colors);
+
+        // printing the Array()
+        console.log('the value of the colors array variable = ',
+            colors); //'red', 'green', 'blue', 'orange', 'gold', 'black'
+
+        //printing array variables inside the document
+        document.write(
+        `<h1>Array Variable colors = ${colors}</h1>`) //output: 'red', 'green', 'blue', 'orange', 'gold', 'black'
+
+        
+        //to read array values at a time all we can for loops
+        for (let index = 0; index < colors.length; index++) {
+            console.log(index);
+            console.log(colors[index]);
+            document.write(
+                `<h1><span style="background-color:${colors[index]}; color:#fff">value = </span><span style="color:${colors[index]}">${colors[index]} </span></h1>`
+            )
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <center>
+        <h1>ARRAY METHODS PART - 1</h1>
+    </center>
+    <hr>
+
+    <center>
+        <h1>1) toString()</h1>
+        <p>the toString method returns a string array values seperated byby commas.</p>
+        <p>and when we use toString() method for any array just it will that value in string seperated by commas <b>but
+                it won't change that original array</b></p>
+    </center>
+
+    <script>
+        let bikes1 = ['Yamaha', 'bajaj', 'Honda', 'TVs'];
+        console.log(bikes1); //'Yamaha', 'bajaj', 'Honda', 'TVs']
+
+        console.log(bikes1.toString()); //Yamaha,bajaj,Honda,TVs
+        document.write(`<h1>by using toString()  = ${bikes1.toString()}</h1>`); //Yamaha,bajaj,Honda,TVs
+
+
+        console.log('original Array = ',
+        bikes1); //'Yamaha', 'bajaj', 'Honda', 'TVs'] only because toString() won't changes the original array
+    </script>
+
+
+
+    <h1>Creating our method for toString()</h1>
+
+    <script>
+        let bikes2 = ['Yamaha', 'bajaj', 'Honda', 'TVs'];
+
+        function ownToString(arry) {
+            var result = '';
+            for (let i = 0; i < arry.length; i++) {
+                // console.log(arry[i]);
+                result += `${arry[i]},`
+            }
+            console.log(result);
+
+        }
+        //   ownToString(bikes2)
+        var colors = ['red', 'green', 'blue']
+        ownToString(colors);
+        ownToString(bikes2);
+    </script>
+</body>
+
+</html>

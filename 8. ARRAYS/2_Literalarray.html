@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Arrays</h1>
+        <p>Array is a collection of data</p>
+    </center>
+    <hr>
+
+    <h1>Types of array</h1>
+    <ol>
+        <li>Literal Array</li>
+        <li>Object Array</li>
+        <li>JSON Array</li>
+    </ol>
+    <hr>
+    <h2>We can create arrays using three methods</h2>
+    <ol>
+        <li>Literal Type</li>
+        <li>Creating array using contructor type</li>
+        <li>Creating array using Constructor with parameter</li>
+    </ol>
+
+    <h1>Creating any array usinf Literal type</h1>
+    <script>
+        let colors = ['red', 'green', 'blue', 'orange', 'gold', 'black'];
+        console.log('length = ' + colors.length);
+        console.log(colors); //printing arrays at the time
+        //output:['red', 'green', 'blue', 'orange', 'gold', 'black'];
+
+        //printing array variable inside the document
+        document.write(`<h1>Array Variable colors = ${colors} </h1>`); //output : red, green, blue, orange, gold, black
+
+        //getting single values from array using that index position
+        //syntax: arrayName[indexvalue]
+        console.log(colors[0]); //output: red
+        console.log(colors[1]); //output: green
+        console.log(colors[2]); //output: blue
+
+        document.write(`<h1 style="color:${colors[2]}">Colors variable index position 2 = ${colors[2]}</h1>`)
+
+        //to read array values at a time all we can for loops
+        for (let index = 0; index < colors.length; index++) {
+            console.log(index);
+            console.log(colors[index]);
+            document.write(
+                `<h1><span style="background-color:${colors[index]}; color:#fff">value = </span><span style="color:${colors[index]}">${colors[index]} </span></h1>`
+            )
+
+        }
+    </script>
+</body>
+
+
+</html>
