@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>push() method</h1>
+    <p>the push() method will insert the the new elem at the end of the array</p>
+    <p>synatx: array.push('value');</p>
+    <hr>
+
+
+    <input type="text" placeholder="your name" id="name">
+    <button onclick="insertaElement()">push</button>
+
+    <!-- result -->
+     <ul id="list">
+     </ul>
+    <script>
+       var bikes=['yamaha'];
+       console.log('before the push:',bikes.length);
+       console.log('before the push:',bikes);
+
+       //push method to insert the elem in the end of the array 
+
+       bikes.push('tvs');
+       console.log('after the push:',bikes.length);
+       console.log('after the push:',bikes);
+
+       bikes.push('honda');
+       console.log('after the push:',bikes.length);
+       console.log('after the push:',bikes);
+
+       bikes.push('ducatti','royal Enfield');
+       console.log('after the push:',bikes.length);
+       console.log('after the push:',bikes);
+
+       //pushing a value from the input
+       var inputtag=document.getElementById('name');
+       var ultag=document.getElementById('list');
+
+       var names=[];
+       console.log('before the push length:',names.length);
+       console.log('before the push value:',names);
+
+       function insertaElement(){
+names.push(inputtag.value);
+console.log('before the push length:',names.length);
+       console.log('before the push value:',names);
+
+       //reading an array elem and displatying the values inside the ul tag
+       ultag.innerHTML=''
+       for(let index in names){
+        console.log(names[index]);
+        ultag.innerHTML+=`
+        <li>${names[index]}</li>
+        `
+        
+       }
+       }
+    
+    </script>
+</body>
+</html>

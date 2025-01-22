@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>shift() method</h1>
+        <p>teh shift()  method is also same like the pop() method type only it also removes the elem from the array but the pop() is removed at the end of the array but the shift() method is removed the elem from tyhe beginning of the array  </p>
+    </center>
+
+    <script>
+         var bikes=['yamaha','bajaj','ducatti','royal Enfield','honda'];
+       console.log(bikes);
+
+       //applying the shift method
+       bikes.shift();//now first elem will be removed from the array i.e.,yamaha
+       console.log(bikes);//['bajaj', 'ducatti', 'royal Enfield', 'honda']
+
+        //applying the shift method
+        bikes.shift();//now first elem will be removed from the array i.e.,bajaj
+       console.log(bikes);//[ 'ducatti', 'royal Enfield', 'honda']
+
+       bikes.shift();//now first elem will be removed from the array i.e.,ducatti
+       console.log(bikes);//[ 'royal Enfield', 'honda']
+       //at the end the array is the empty[]
+       
+    </script>
+</body>
+</html>

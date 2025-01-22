@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>8) Concat Method</h1>
+    </center>
+    <p>the Concat() method cancatinates (joins) two or more Arrays, and returns the new array, containing the joined
+        array </p>
+    <p>This method does not change the original array</p>
+
+    <p>Syntax</p>
+    <pre>
+        array1.concat(array2, array3, array4, ...... , arrayN)
+    </pre>
+
+    <script>
+        //adding all class students with a college arraty to calculate total number of students
+
+        let class1Students = ['Naveen', 'Madhu', 'Guru', 'Arun', 'Kiran'];
+        let class2Students = ['Swathi', 'annapoorna', 'yashaswini', 'apeksha', 'shareef']
+
+        // let TotalStudentsInCollege = ['Naveen', 'Madhu', 'Guru', 'Arun', 'Kiran', 'Swathi', 'annapoorna', 'yashaswini', 'apeksha', 'shareef']
+
+        let TotalStudentsInCollege = class1Students.concat(
+            class2Students); //we are adding class1 and class2 and storing in a variable
+
+        console.log('Class1 students', class1Students);
+        console.log('Class2 students', class2Students);
+        console.log('total students in college', TotalStudentsInCollege);
+
+        //if it is a number array
+        let array1 = [1, 2, 3, 4, 5]
+        let array2 = [6, 7, 8, 9, 10]
+        let array3 = [11, 12, 13, 14, 15]
+
+        //lets add all these 3 arrays inside one new variable
+        let new_array = array1.concat(array2, array3)
+
+        console.log('Array1 = ', array1);
+        console.log('Array2 = ', array2);
+        console.log('Array3 = ', array3);
+        console.log('new array = ', new_array);
+
+        console.log('Type of Array', typeof new_array);
+        console.log('Checking new_array is array or not', Array.isArray(new_array));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Array Methods Part 2</h1>
+    </center>
+
+    <h1>7) Delete Method</h1>
+    <p>Array element can be delete by using delete method in the javascript.</p>
+    <p>If we use the method to delete the array element just it deletes that value but not the place like index value it
+        will leaves undefined holes in that array.</p>
+
+    <p>Syntax</p>
+    <pre>
+        delete array [Index]
+    </pre>
+
+    <script>
+        let bikes = ['yamaha', 'ducatti', 'Royal Enfield', 'TVs', 'Honda'];
+        console.log('Before using delete (value)', bikes);
+        console.log('Before using delete (length)', bikes);
+
+        //deleting a element using delete method
+        delete bikes[3];
+        console.log('After using delete (value)', bikes);
+        console.log('After using delete (length)', bikes);
+
+        //deleting a element using delete method
+        delete bikes[0];
+        console.log('After using delete (value)', bikes);
+        console.log('After using delete (length)', bikes);
+
+        console.log('Index 0 = ', bikes[0]);
+        console.log('Index 1 = ', bikes[1]);
+        console.log('Index 2 = ', bikes[2]);
+        console.log('Index 3 = ', bikes[3]);
+        console.log('Index 4 = ', bikes[4]);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>pop method</h1>
+    <p>the pop() method the last elem is removed from the array and it returs the removed elem</p>
+
+    <hr>
+    <h1>syntax: array.pop()</h1>
+    <hr>
+    <button onclick="removeelem()">removeelement</button>
+
+    <script>
+        var bikes = ['yamaha', 'honda', 'tvs', 'bajaj'];
+        console.log('before the pop:', bikes.length);
+        console.log('before the pop:', bikes);
+
+        //usingf the pop method
+        bikes.pop();
+        //now we are applying the pop method for the bikes array this time pop method it removes last elem from the array so it removes that and returns the same
+        console.log('after the pop:', bikes.length);
+        console.log('after the pop:', bikes);
+
+
+        function removeelem() {
+            bikes.pop();
+            console.log('after the pop:', bikes.length);
+            console.log('after the pop:', bikes);
+        }
+    </script>
+</body>
+
+</html>

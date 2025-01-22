@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="f2()">Call Object Function</button>
+
+    <script>
+        //primitive datatypes
+        let numbers = [1, 2, 3, 4]; //[number, number, number, number]
+        console.log(numbers[0]);
+        console.log(numbers[1]);
+        console.log(numbers[2]);
+        console.log(numbers[3]);
+
+        let names = ['a', 'b', 'c']; //[string, string, string]
+        console.log(names[0]);
+        console.log(names[1]);
+        console.log(names[2]);
+
+        let conditions = [true, false, true]; //[boolean, boolean, boolean];
+        console.log(conditions[0]);
+        console.log(conditions[1]);
+        console.log(conditions[2]);
+
+        //no primitive datatypes
+        //lets create no-primitive datatypes that array of objects
+        //to multiple diffrent user we can store inside the array
+        //but to give multiple information one user or  one object we can strore that information inside the one object
+        //because array can contain multiple things of diffrent and object can contains only related multiple information of one thing or one object 
+        // let users = [{}, {}]
+
+        //creating object and printing that object
+        let singleUser = {
+            fullname: 'Yashashwini',
+            email: 'yashashwini@gmail.com',
+            phonennumber: '724631109',
+            address: 'Bangalore', //string
+            age: 22,
+            yearofPassedOut: 2024, //number
+            isGood: true, //boolean
+
+            //storing non-primitive dataypes
+            visitedPlaced: ['Bangalore', 'North Bangalore', 'West Bangalore'],
+            //stroring inside the object again one object
+            address: {
+                pincode: 560121,
+                city: 'Bangalore',
+                doorNo: 12
+            },
+            fullName: () => {
+                return 'Test1' + ' test2'
+            },
+            displayALert: function () {
+                alert('hello this alert from object')
+            }
+        }
+
+        //reading object
+        //syntax: objectname.keyName it prints that key value
+        console.log(singleUser.fullname); //reading string datatypes from object
+        console.log(singleUser.email);
+        //reading number datatypes from object
+        console.log(singleUser.age);
+
+
+        //reading boolean datatypes from object
+        console.log(singleUser.isGood);
+
+
+
+        //reading non-primitive datatypes it is bit diffrent because we can't read directly not primitive datatypes
+        console.log(singleUser.visitedPlaced); //here we will get only that array
+        //here singleUser.visitedPlaced is a one array to read this index values we need to use singleUser.visitedPlaced[index]
+        console.log(singleUser.visitedPlaced[0]);
+        console.log(singleUser.visitedPlaced[1]);
+        console.log(singleUser.visitedPlaced[2]);
+
+
+        //reading object from the object
+        document.write(`<h3>${singleUser.address}</h3>`)
+        console.log(singleUser.address); //here we are getting object
+        //once if get anyehare object we need to read that object.
+        //here singleUser.address is object to read values singleUser.address.keyName
+        console.log(singleUser.address.pincode);
+        console.log(singleUser.address.doorNo);
+        console.log(singleUser.address.city);
+
+        console.log(singleUser.fullName());
+
+        function f2() {
+            singleUser.displayALert()
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Sorting in Ascending and descending order by using comparision function.</h1>
+    </center>
+
+    <hr>
+
+    <script>
+        let numberArray1 = [51, 44, 44, 477, 444, 258, 475, 0, 582, 4747, 58, 5, 47]
+        console.log('before sprting function', numberArray1);
+
+        //using comparision function
+        // numberArray1.sort();
+        // console.log(numberArray1);
+
+        // for ascending order
+        numberArray1.sort((currentItem, nextItem) => {
+            return currentItem - nextItem;
+        })
+        console.log('after sorting function', numberArray1);
+        // for ascending order
+
+        let numberArray2 = [51, 44, 44, 477, 444, 258, 475, 0, 582, 4747, 58, 5, 47]
+        console.log('before sorting function', numberArray2);
+
+        numberArray2.sort((currentItem, nextItem) => {
+            return nextItem - currentItem;
+        })
+        console.log('after sorting function', numberArray2);
+    </script>
+</body>
+
+</html>

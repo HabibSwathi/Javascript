@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h2>
+            join() method
+        </h2>
+        <p>the join method returns a new string by concat all of the array elem in a array,seperated by comma or specified symbol.</p>
+    </center>
+
+    <script>
+          let bikes2 = ['Yamaha', 'bajaj', 'Honda', 'TVs'];
+        console.log(bikes2);
+        document.write(`<h3>${bikes2}</h3>`)
+        
+
+        //by using tostring()method
+
+    document.write(`<h3>toString() the array bikes= ${bikes2.toString()}</h3>`);
+    console.log(bikes2.toString());
+
+    //by using join() method
+
+    document.write(`<h3>join() the array bikes=${bikes2.join()}</h3>`);//here the same thing it will print same like the tostring() method type 
+    //because we are not using any parameter inside the join method
+    document.write(`<h3>join() the array bikes=${bikes2.join('-')}</h3>`);
+    document.write(`<h3>join() the array bikes=${bikes2.join('#')}</h3>`);
+    
+    </script>
+</body>
+</html>
