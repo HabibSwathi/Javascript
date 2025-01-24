@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            min-height: 100vh;
+            padding: 20px;
+            background-color: lightblue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container form {
+            width: 300px;
+            padding: 20px;
+            background-color: white;
+            margin-bottom: 20px;
+        }
+
+        form input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 6px;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 100%;
+            border: none;
+            padding: 10px;
+            font-size: 1.1rem;
+            background-color: darkgreen;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form id="userForm">
+            <label for="name">Username</label>
+            <input type="text" placeholder="Enter Username" name="name" id="name" required>
+            <label for="email">Email Address</label>
+            <input type="email" placeholder="Enter your Email" name="email" id="email" required>
+            <label for="address">Address</label>
+            <textarea rows="5" placeholder="Address" id="address"></textarea>
+            <label for="gender">Gender</label>
+            <select id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <button type="button" onclick="insertData()">Submit</button>
+        </form>
+
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Gender</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let name = document.getElementById('name');
+        let email = document.getElementById('email');
+        let address = document.getElementById('address');
+        let gender = document.getElementById('gender');
+        let userTable = document.getElementById('userTable').querySelector('tbody');
+        var allUsers = [];
+
+        function insertData() {
+
+            let newUser = {
+                userName: name.value,
+                userEmail: email.value,
+                userAddress: address.value,
+                userGender: gender.value
+            };
+
+
+            allUsers.push(newUser);
+
+
+            let row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${newUser.userName}</td>
+                <td>${newUser.userEmail}</td>
+                <td>${newUser.userAddress}</td>
+                <td>${newUser.userGender}</td>
+            `;
+            userTable.appendChild(row);
+
+
+            name.value = '';
+            email.value = '';
+            address.value = '';
+            gender.value = 'male';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            margin: auto;
+            padding: 10px 15px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+            /* border: 2px solid rgba(202, 109, 109, 0.721); */
+        }
+
+        button {
+            margin-bottom: 20px;
+            border: none;
+            padding: 10px;
+            border-color: antiquewhite;
+            background-color: #eae3e3d2;
+            color: white;
+            width: 100%;
+            cursor: pointer;
+
+        }
+
+        input {
+            padding: 10px;
+            border: 2px solid black;
+            margin-top: 10px;
+        }
+
+        #arrayForm {
+            border: 2px solid rgba(202, 109, 109, 0.721);
+            padding: 20px 30px;
+            border-radius: 10px;
+            background-color: aqua;
+
+        }
+
+        button #push {
+            border-radius: 10px;
+            background-color: red;
+            color: white;
+        }
+
+        #output {
+            gap: 30px;
+            display: block;
+
+        }
+
+        .main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #output {
+            margin-right: 20px;
+            border: 2px solid green;
+            transform: translateX(20px);
+
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1
+            style="padding: 10px; color: green; background-color: rgba(252, 252, 252, 0.804); width: fit-content; margin-bottom: 20px;">
+            ARRAY OPERATIONS</h1>
+    </center>
+    <div class="main">
+        <form id="arrayForm" onsubmit="return false;">
+            <input type="number" id="inputValue" placeholder="Enter a number"><br><br>
+            <button type="button" id="push" onclick="pushElement()"
+                style="background-color: red; color: white; border-radius: 4px;">Push</button><br>
+            <button type="button" id="pop" onclick="popElement()"
+                style="background-color: green; color: white; border-radius: 4px;">Pop</button><br>
+            <button type="button" id="display" onclick="displayArray()"
+                style="background-color: blue; color: white; border-radius: 4px;">Display</button><br>
+            <button type="button" id="clear" onclick="clearArray()"
+                style="background-color: yellowgreen; color: white; border-radius: 4px;">Clear</button>
+            <br><br>
+        </form>
+        <br><br>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        let array = [];
+
+        function pushElement() {
+            let inputElement = document.getElementById("inputValue");
+            let value = parseInt(inputElement.value);
+
+            if (!isNaN(value)) {
+                array.push(value);
+                document.getElementById("output").innerText = ` Element ${value} pushed to the array.`;
+            } else {
+                document.getElementById("output").innerText = "Please enter a valid number.";
+            }
+
+        }
+
+        function displayArray() {
+            if (array.length > 0) {
+                document.getElementById("output").innerText = `Current Array: [${array.join(", ")}]`;
+            } else {
+                document.getElementById("output").innerText = "The array is empty.";
+            }
+        }
+
+        function popElement() {
+            if (array.length > 0) {
+                let poppedValue = array.pop();
+                document.getElementById("output").innerText = ` poped Element if: [${poppedValue}].`
+            } else {
+                document.getElementById("output").innerText = "The array is not able to pop.";
+            }
+        }
+
+        function clearArray() {
+
+            array = [];
+            document.getElementById("output").innerText = `The array is empty Now.`
+
+        }
+    </script>
+</body>
+
+</html>

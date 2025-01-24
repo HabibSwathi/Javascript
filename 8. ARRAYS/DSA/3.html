@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let array = [
+            [1, 2, 3, 5], // index 0
+            [10, 67, 45, 90], // index 1
+            [12, 45], // index 2
+            [100, 200, 300], // index 3
+            [10, 30] // index 4
+        ];
+
+        let addedArray = [];
+        let subArray = [];
+        let mulArray = [];
+        let divArray = [];
+        let modArray = [];
+        let totatResult = 0;
+
+        for (let i = 0; i < array.length; i++) {
+            let innerArray = array[i];
+            let innerSum = 0;
+            let innerSub = 0;
+            let innerMul = 1;
+            let innerMod = 1;
+            let innerDiv = 1;
+
+            if (array[i] == array[0]) {
+                for (let j = 0; j < innerArray.length; j++) {
+                    innerSum += innerArray[j];
+                }
+                addedArray.push(innerSum);
+            } else if (array[i] == array[1]) {
+                for (let j = 0; j < innerArray.length; j++) {
+                    innerSub -= innerArray[j];
+                }
+                subArray.push(innerSub);
+            } else if (array[i] == array[2]) {
+                for (let j = 0; j < innerArray.length; j++) {
+                    innerMul -= innerArray[j];
+                }
+                mulArray.push(innerMul);
+            } else if (array[i] == array[3]) {
+                for (let j = 0; j < innerArray.length; j++) {
+                    innerMod %= innerArray[j];
+                }
+                modArray.push(innerMod);
+            } else {
+                for (let j = 0; j < innerArray.length; j++) {
+                    innerDiv /= innerArray[j];
+                }
+                divArray.push(innerDiv);
+
+            }
+
+        }
+        console.log("AddedArrays:", addedArray);
+        console.log("SubArrays:", subArray);
+        console.log("mulArrays:", mulArray);
+        console.log("divArray:", divArray);
+        console.log("ModArray:", modArray);
+    </script>
+</body>
+
+</html>
