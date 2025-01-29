@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <center>
+        <h1>ARRAY METHODS PART - 3</h1>
+    </center>
+    <hr>
+    <center>
+        <h1>13) isArray()</h1>
+        <p>the isArray() method is used check the given value or variable or object is an array or not if the given
+            value if it is a array it will true, and if the given value is not an array that time it will return false
+        </p>
+    </center>
+
+    <hr>
+    <p><b>Syntax</b></p>
+    <pre>
+        Array.isArray(any value or variable or object); //return only true or false
+    </pre>
+
+    <script>
+        let stringVariable = 'hello wrold'; //string
+        let arrayvariable = [1, 2, 3]; //array
+        let user = {
+            name: 'test',
+            email: 'test@gmail.com'
+        } //object
+        let booleanVariable = true; // boolean
+        let numberVariable = 100; //number
+
+        //checking all these varibles is array or not using isArray() method
+        console.log('stringVariable  = ', Array.isArray(stringVariable)); //false
+        console.log('arrayVariable = ', Array.isArray(arrayvariable)); //true
+        console.log('user variable = ', Array.isArray(user)); //false
+        console.log('booleanVariable = ', Array.isArray(booleanVariable)); //false
+
+        console.log('numbervariable = ', Array.isArray(numberVariable)); //false
+
+        console.log('passing value = ', Array.isArray('hello')); //false
+        console.log('passing value = ', Array.isArray(1)); //false
+        console.log('passing value = ', Array.isArray([1, 4])); //true
+        console.log('passing value = ', Array.isArray(["11", "hello"])); //true
+    </script>
+
+</body>
+
+</html>
