@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h2>16) find();</h2>
+        <p>The find() method returns the first element in the provided array that satisfies the provided testing
+            function.</p>
+        <p>If no values satisfy the testing function, underfined is returned</p>
+    </center>
+
+    <p><b>Syntax</b> </p>
+    <pre>
+        array.find((element)=>{})
+    </pre>
+    <script>
+        let array = [5, 74, 15, 84, 44]
+        console.log(array);
+
+        var found = array.find((element) => element > 10);
+        console.log(found);
+
+        var found2 = array.find((element) => element < 50);
+        console.log(found2);
+
+        //syntax
+        var found3 = array.find((element) => {
+            if (element > 10) {
+                return element
+            }
+        })
+
+        console.log(found3);
+    </script>
+</body>
+
+</html>

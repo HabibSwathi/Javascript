@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let array = ['apple', 'mango', 'banana', 'orange', 'apple', 'mango']
+        console.log('array = ', array);
+
+        document.write(`<h1>The last index of apple = ${array.lastIndexOf('apple')}</h1>`); //4
+        document.write(`<h1>The last index of papaya = ${array.lastIndexOf('papaya')}</h1>`); //-1
+
+        // creating function to search last index of Element
+        function searchFromLast(value) {
+            if (array.lastIndexOf(value) == -1) {
+                document.write(`<h1>Given ${value} value in array is not found. </h1>`)
+            } else {
+                document.write(`<h1>Given ${value} value is present in index of ${array.lastIndexOf(value)} </h1>`)
+            }
+        }
+
+        searchFromLast('apple'); //4
+        searchFromLast('mango'); //5
+
+        // searching from particular index position 
+        document.write(`<h1>The index of apple = ${array.lastIndexOf('apple', 2)} </h1>`) //0
+
+        // creating function to search a value from particular index postition using lastIndexOf(item,indexposition)
+    </script>
+</body>
+
+</html>
