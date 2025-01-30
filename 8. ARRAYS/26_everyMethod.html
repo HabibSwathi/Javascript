@@ -1,11 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <center>
+        <h2>20) every();</h2>
+        <p>The every() method tests whether all elements in the array pass the test implemented by the provided
+            function.</p>
+        <p>It returns a Boolean Value.</p>
+    </center>
+    <hr>
+
+    <p><b>SYNATX :</b></p>
+    <pre>
+        array.every((element)=>{});
+    </pre>
+    <hr>
+
+
+    <script>
+        let array = [11, 23, 45, 67, 12, 34, 56, 90];
+
+        // const condition = (item) => item<20
+        console.log(array.every((item) => item < 20));
+
+        function testStudent(studentsMarks) {
+            if (studentsMarks.every((marks) => marks >= 35)) {
+                console.log('student is pass');
+
+            } else {
+                console.log('student fail');
+
+            }
+        }
+        testStudent([45, 67, 89, 20, 99, 56]);
+
+        let alluserPayments = [{
+                month: 'jan',
+                date: '12/01/2024',
+                payment: 90000,
+            },
+            {
+                month: 'jan',
+                date: '12/01/2024',
+                payment: 90000,
+            },
+            {
+                month: 'jan',
+                date: '12/01/2024',
+                payment: 90000,
+            },
+            {
+                month: 'jan',
+                date: '12/01/2024',
+                payment: 90000,
+            },
+            {
+                month: 'jan',
+                date: '12/01/2024',
+                payment: 90000,
+            }
+        ]
+
+
+        var paymentMain = 90000;
+
+        function checkEligibility(userPayments) {
+            if (userPayments.every((paymentItem) => paymentItem.payment == paymentMain)) {
+                console.log('user is elegible to take next loan');
+
+            } else {
+                console.log('user is not eligible to take next loan');
+
+            }
+        }
+        checkEligibility(alluserPayments);
+
+
+        //checking library managemnt
+        var userlibraryHistory = [{
+                date: '12/01/2024',
+                returned: true,
+                bookName: 'test book'
+            },
+            {
+                date: '12/01/2024',
+                returned: true,
+                bookName: 'test book'
+            },
+            {
+                date: '12/01/2024',
+                returned: true,
+                bookName: 'test book'
+            },
+            {
+                date: '12/01/2024',
+                returned: true,
+                bookName: 'test book'
+            },
+            {
+                date: '12/01/2024',
+                returned: true,
+                bookName: 'test book'
+            }
+        ]
+
+        function issueBook(history) {
+            if (history.every((item) => item.returned == true)) {
+                console.log('issue next book this user returned all books');
+
+            } else {
+                console.log("can't issue, please return all books");
+            }
+        }
+        issueBook(userlibraryHistory);
+    </script>
 </body>
+
 </html>
