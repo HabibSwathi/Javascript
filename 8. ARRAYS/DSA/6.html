@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <script>
+        let array = ['apple', 'mango', 'strawberry', 'kiwi', 'avacado', 'orange', 'banana', ]
+
+        var promptVar = prompt('Enter fruit name : ')
+
+        for (var i = 0; i < array.length; i++) {
+
+            if (array[i] == promptVar) {
+                document.write(`<p>${array}</p>`)
+                document.write(`<p><span style= "color: red">${array[i]}</span></p>`)
+            }
+        }
+    </script>
+</body>
+
+</html>
