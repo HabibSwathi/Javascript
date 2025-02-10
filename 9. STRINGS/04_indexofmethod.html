@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+
+<body>
+    <center>
+        <h1>STRING METHODS..!</h1>
+    </center>
+    <h1>Method1: indexOf()</h1>
+    <p>the indexOf() method is used to find perticular value index in given string</p>
+
+    <h4>Syntax</h4>
+    <pre>
+        string.indeOf(any_value);
+    </pre>
+
+
+    <h1>example</h1>
+    <p id="result"></p>
+    <script>
+        let text = 'javascript';
+        document.write(`<h1> index of v in given text variable = ${text.indexOf('v')}</h1>`)
+        var result = document.getElementById('result');
+        for (let i = 0; i < text.length; i++) {
+            result.innerHTML += `<span>${text[i]}</span>`
+        }
+
+        function findtext(letter) {
+            let index = text.indexOf(letter);
+            console.log(index); //0
+            result.innerHTML = '';
+            for (let i = 0; i < text.length; i++) {
+                if (i == index) {
+                    result.innerHTML += `<span><mark>${text[i]}</mark></span>`
+                } else {
+                    result.innerHTML += `<span>${text[i]}</span>`
+                }
+            }
+        }
+        let letter = prompt('find letter');
+        findtext(letter)
+
+        // let data = 'the indexOf() method is used to find perticular value index in given string';
+        //     console.log(data.split(' '));
+        //    console.log( data.split(' ').indexOf('the'));
+    </script>
+</body>
+
+</html>

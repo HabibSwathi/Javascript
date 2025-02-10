@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h2>22) fill();</h2>
+        <p>The fill() method fills specified elements in an array with a value, method overwrites the original array</p>
+        <p>Start and end position can be specified. If not, all elements will be filled.</p>
+    </center>
+    <hr>
+
+    <p><b>SYNATX :</b></p>
+    <pre>
+        array.fill(value, start, end);
+    </pre>
+
+    <script>
+        let fruits = ['banana', 'apple', 'orange', 'mango'];
+        console.log('original array=', fruits);
+
+        // console.log(fruits.fill('kiwi'));
+        console.log(fruits.fill('kiwi', 1, 3));
+
+        var names = ['arun', 'kiran', 'kumar', 'naveen'];
+        console.log(names.indexOf('kiran'));
+        names.fill('manu', names.indexOf('kiran'), names.indexOf('kiran') + 1);
+        console.log(names);
+
+
+        function changenames(prevname, newname) {
+            if (names.indexOf(prevname) < 0) {
+                console.log('user given name is not present in array');
+
+            } else {
+                names.fill(newname, names.indexOf(prevname), names.indexOf(prevname) + 1)
+            }
+            console.log(names);
+
+        }
+        let prevname = prompt('enter which name you need to change?');
+        let newname = prompt('enter new name to update previous name');
+
+        changenames(prevname, newname)
+    </script>
+</body>
+
+</html>

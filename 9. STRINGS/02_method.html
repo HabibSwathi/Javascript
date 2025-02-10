@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let string2 = new String('hi');
+        console.log('string2 variable value=', string2);
+        document.write(`<h1>string2 value=${string2}</h1>`)
+        document.write(`<h1>string2 value=${typeof string2}</h1>`)
+        document.write(`<h1>string2 value=${ string2.length}</h1>`)
+
+        //adding values to string2 in the string object variable
+        //in string2 there are no index value
+        //we can add avalue to any index position using string2[index]=value;
+        //mutable value it won't change the original string length and values
+        string2[0] = 'H';
+        string2[1] = 'e';
+        string2[2] = 'l';
+        string2[3] = 'l';
+        string2[4] = 'o';
+        document.write(`<h1>string2 index 0 =${string2[0]}</h1>`)
+        document.write(`<h1>string2 index 1 =${string2[1]}</h1>`)
+        document.write(`<h1>string2 index 2 =${string2[2]}</h1>`)
+        document.write(`<h1>string2 index 3 =${string2[3]}</h1>`)
+        document.write(`<h1>string2 index 4 =${string2[4]}</h1>`)
+        document.write(`<h1>string2 index 5 =${string2[5]}</h1>`)
+
+        for (let i = 0; i < string2.length; i++) {
+            document.write(`<h1>string2 index=${i} =${string2[i]}</h1>`)
+
+        }
+    </script>
+</body>
+
+</html>

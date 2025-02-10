@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // String.prototype.includes()
+        // Detect Suspicious Message(Fun)
+
+        // let text = "Win a free iPhone now!";
+        // let spamWords = ["win", "free", "iPhone"];
+        // Expected Output: true
+
+        let text = "Win a free iPhone now!";
+        let spamWords = ["win", "free", "iPhone"];
+
+        let isSpam;
+        // text.includes()
+        for (let i = 0; i < text.length; i++) {
+            for (let j = 0; j < spamWords.length; j++) {
+                isSpam = text.includes(spamWords[j])
+            }
+        }
+        console.log(isSpam);
+    </script>
+</body>
+
+</html>

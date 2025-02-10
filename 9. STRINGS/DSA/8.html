@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let prices = [49.99, 19.99, 5.5];
+        // Expected Output: ["$49.99", "$19.99", "$5.50"]
+
+        let prices = [49.99, 19.99, 5.5];
+        let pricesFinal = prices.map(price => `$${price.toFixed(2)}`);
+
+        console.log(pricesFinal);
+    </script>
+</body>
+
+</html>

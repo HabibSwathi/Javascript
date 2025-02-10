@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <button onclick="replaceword()">find and upadate</button>
+
+    <script>
+        let string1 = 'i like javascript';
+        console.log('string before=', string1);
+        console.log('string after =', string1.replace('javascript', 'python'));
+
+        var text =
+            'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci dicta, quasi accusantium velit veritatis quisquam consectetur iste, corporis, quae sint aperiam neque! Quidem modi a beatae nesciunt, consectetur ab harum?';
+        var textarray = text.split(' ');
+        console.log(text.split(' '));
+
+        var resultptag = document.getElementById('result');
+        textarray.forEach((item) => {
+            resultptag.innerHTML += `<span>${item}</span> `
+        })
+
+        function replaceword() {
+            let prev_word = prompt('enter which need to change?')
+            let new_word = prompt('give new word to update.')
+            let findedindex = textarray.indexOf(prev_word);
+            console.log(findedindex);
+            resultptag.innerHTML = ''
+            text = text.replace(prev_word, new_word);
+            textarray = text.split(' ');
+            console.log(text);
+
+            textarray.forEach((item, index) => {
+                if (findedindex == index) {
+                    resultptag.innerHTML += `<span style="color:white;background:green;">${item}</span>`
+                } else {
+                    resultptag.innerHTML += `<span>${item}</span>`
+                }
+            })
+
+
+        }
+    </script>
+</body>
+
+</html>

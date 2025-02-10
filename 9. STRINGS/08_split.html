@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>STRING METHODS</h1>
+    </center>
+    <hr>
+
+    <h1>split() method</h1>
+    <hr>
+
+    <button onclick="   checkExtenction();">Check file extenction</button>
+    <script>
+        let string1 = 'this is the javascript';
+        console.log(string1);
+        console.log('after split = ', string1
+        .split()); //if we are not mention inside the method if it is empty if converts the string to array ['this is the javascript']
+
+        console.log('split method with some parameters inside the method = ', string1.split(
+        '')); //if pass emty string just split every letter and stores inside the array
+        console.log('split method with some parameters inside the method = ', string1.split(
+        ' ')); //if pass emty string just split every word and stores inside the array
+
+        let email = 'arun@gmail.com';
+        let splittedEmail = email.split('@')
+        console.log(splittedEmail);
+        console.log(typeof splittedEmail);
+        console.log(splittedEmail[0]);
+
+        //create a one function to extract the name from and given email
+
+        let file = 'database.pdf';
+        console.log(file.split('.')[file.split('.').length - 1]);
+
+        const allExtenctions = {
+            html: 'https://cdn3d.iconscout.com/3d/free/thumb/free-html-3d-logo-download-in-png-blend-fbx-gltf-file-formats--5-five-brand-vol-1-pack-logos-3640299.png?f=webp',
+            css: 'https://img.icons8.com/fluent/512/css3.png'
+        }
+
+        function checkExtenction() {
+            let file = prompt('enter any file name')
+            let extenction = file.split('.');
+            let result = extenction.pop(); //getting last element
+            console.log(`the given file is ${result} file`); //html
+            console.log(allExtenctions[
+            result]); //we can get any key value from an object using object.keyname or objcet[keyname]
+            document.write(`<img src=${allExtenctions[result]} width="150px">`)
+
+        }
+    </script>
+</body>
+
+</html>

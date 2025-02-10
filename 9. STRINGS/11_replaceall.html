@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>replaceAll() method</h1>
+    </center>
+    <script>
+        let string = 'I hate javascript,i really hate..!'
+        console.log('before=', string);
+        console.log('after=', string.replaceAll('I', 'we'));
+        console.log(string.toLowerCase().replaceAll(('hate').toLowerCase(), 'like'));
+
+        var string1 = '       javascript       trim   method'
+        console.log(string1.trim()); //used in the external js file try it
+        console.log(string1.replace(/\s+/g, " "));
+        console.log(string1.replace(/[0-9]/g, "*"));
+
+        let string2 = 'My mobile number is  +91 89754333908';
+        console.log(string1.replace(/[aeiou]/g, "-"));
+        console.log(string1.replace(/[a-z A-Z]/g,
+        "/")); //these are called the regular expression used in the validation of the mobile no ,email and other things
+    </script>
+</body>
+
+</html>

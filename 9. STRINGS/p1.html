@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="result"></p>
+
+    <script>
+        let words = "the indexOf method is used to find perticular value index in given string";
+        //  console.log(`${words.indexOf('m')}`);
+        let sentence = words.split(" ")
+        var result = document.getElementById('result')
+
+        for (let i = 0; i < sentence.length; i++) {
+            result.innerHTML += `<span>${sentence[i]}</span>`
+        };
+
+        function findword(words1) {
+            let index = sentence.indexOf(words1);
+            console.log(index);
+            result.innerHTML = '';
+            for (let i = 0; i < sentence.length; i++) {
+                if (i == index) {
+                    result.innerHTML += `<span><mark>${sentence[i]}</mark></span>`
+                } else {
+                    result.innerHTML += `<span>${sentence[i]}</span>`
+                }
+            }
+
+        }
+        let words1 = prompt('find word');
+        findword(words1);
+    </script>
+</body>
+
+</html>

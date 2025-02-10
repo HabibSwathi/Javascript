@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var string3 = new String('this is the string we are creating using constructor with parameter');
+    document.write(`<h4>the string3 variable value=${string3}</h4>`)
+    document.write(`<h4>the string3 variable value=${string3.length}</h4>`)
+    document.write(`<h4>the string3 variable value=${typeof string3}</h4>`)
+
+    document.write(`<h4>the string3 variable value=${string3[0]}</h4>`)
+
+    //reading all index values using loops
+    for (let i = 0; i < string3.length; i++) {
+      document.write(`<h4>the string3 index=${i} value=${string3[i]}</h4>`)
+
+    }
+  </script>
+</body>
+
+</html>

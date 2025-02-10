@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>inclues method</h1>
+        <p>it check the specified value is there or not in a given string which is their or not and returns true
+            otherwise false.</p>
+    </center>
+
+    <script>
+        let string = 'I Like Javascript';
+        console.log('checking the like word is present or not in string', string.includes(
+        'Like')); //it is case sensitive
+        console.log('checking the like word is present or not in string', string.includes('a')); //it is case sensitive
+        console.log('checking the like word is present or not in string', string.includes('x')); //it is case sensitive
+
+        function chat(feedback) {
+            if (feedback.includes('good') || feedback.includes('like')) {
+                alert('thank your positive feedback😊');
+            } else if (feedback.includes('bad') || feedback.includes('not good') || feedback.includes('hate')) {
+                alert('negative feedback😞')
+            }
+        }
+        let feedback = 'javascript is good to understand and easy language,so i like it.';
+        chat(feedback);
+    </script>
+</body>
+
+</html>

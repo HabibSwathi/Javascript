@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>string methods
+        </h1>
+
+        <p>it is a collection of data.string are the immutable it won't change the value in the original string object
+        </p>
+        <p>there are 3 ways to create
+        </p>
+        <pre>
+            1)literal string
+            2)using constructor method
+            3)using constructor with parameter
+        </pre>
+    </center>
+    <hr>
+    <script>
+        //creating string using string literal that is ("")('')(``)
+        let string1 = 'WELCOME TO STRING METHODS';
+        //printing string using variable
+        document.write(`<h1>string1 variable value=${string1}</h1>`)
+
+        //getting variable datatype using typeof method
+        document.write(`<h1>string1 variable value=${typeof string1}</h1>`)
+
+        //getting the lenght of the string
+        document.write(`<h1>string1 variable value=${string1.length}</h1>`)
+
+        //getting the position of the index values
+        document.write(`<h1>string1 variable index values are=${string1[0]}</h1>`)
+        document.write(`<h1>string1 variable index values are=${string1[1]}</h1>`)
+        document.write(`<h1>string1 variable index values are=${string1[2]}</h1>`)
+        document.write(`<h1>string1 variable index values are=${string1[3]}</h1>`)
+        document.write(`<h1>string1 variable index values are=${string1[4]}</h1>`)
+        document.write(`<h1>string1 variable index values are=${string1[5]}</h1>`)
+        //getting the last index of the string1
+        document.write(`<h1>string1 variable index values are=${string1[string1.length-1]}</h1>`)
+
+        //getting all string index values using the  loops
+        for (let i = 0; i < string1.length; i++) {
+            document.write(`<h3 style='color:green'> index =${i} values are=${string1[i]}</h3>`)
+
+        }
+    </script>
+</body>
+
+</html>
