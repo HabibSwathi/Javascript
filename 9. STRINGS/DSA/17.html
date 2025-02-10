@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let userData = [{
+        //         name: "Alice",
+        //         isVerified: true
+        //     },
+        //     {
+        //         name: "Bob",
+        //         isVerified: false
+        //     },
+        //     {
+        //         name: "Charlie",
+        //         isVerified: true
+        //     }
+        // ];
+        // Expected Output: false
+
+        let userData = [{
+                name: "Alice",
+                isVerified: true
+            },
+            {
+                name: "Bob",
+                isVerified: false
+            },
+            {
+                name: "Charlie",
+                isVerified: true
+            }
+        ];
+
+        let VerifyDone = true;
+
+        let verified = userData.every((Verify) => Verify.isVerified == VerifyDone)
+        console.log(verified);
+    </script>
+</body>
+
+</html>

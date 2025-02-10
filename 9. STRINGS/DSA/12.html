@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let cart = [{
+        //         item: "Shoes",
+        //         price: 100,
+        //         quantity: 2
+        //     },
+        //     {
+        //         item: "Bag",
+        //         price: 50,
+        //         quantity: 1
+        //     }
+        // ];
+        // Expected Output: 250
+
+        let cart = [{
+                item: "Shoes",
+                price: 100,
+                quantity: 2
+            },
+            {
+                item: "Bag",
+                price: 50,
+                quantity: 1
+            }
+        ];
+
+        let totalCost = cart.reduce((total, product) => total + (product.price * product.quantity), 0);
+
+        console.log(totalCost);
+    </script>
+</body>
+
+</html>

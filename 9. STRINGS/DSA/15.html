@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let userList = [{
+        //         id: 101,
+        //         name: "Alice"
+        //     },
+        //     {
+        //         id: 102,
+        //         name: "Bob"
+        //     },
+        //     {
+        //         id: 103,
+        //         name: "Charlie"
+        //     }
+        // ];
+        // let searchId = 102;
+        // Expected Output: { id: 102, name: "Bob" }
+
+        // Expected Output: { id: 102, name: "Bob" }
+
+        const users = [{
+                id: 101,
+                name: "Alice"
+            },
+            {
+                id: 102,
+                name: "Bob"
+            },
+            {
+                id: 103,
+                name: "Charlie"
+            }
+        ];
+
+        const getUserById = (id) => users.find(user => user.id === id);
+
+        console.log(getUserById(102));
+    </script>
+</body>
+
+</html>

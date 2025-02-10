@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let products = [{
+                name: "Laptop",
+                price: 1500
+            },
+            {
+                name: "Phone",
+                price: 800
+            },
+            {
+                name: "Tablet",
+                price: 1200
+            }
+        ];
+
+        let sortedProducts = products.sort((a, b) => a.price - b.price);
+
+        console.log(sortedProducts);
+    </script>
+</body>
+
+</html>
