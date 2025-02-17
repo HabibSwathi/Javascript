@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        form {
+            width: 300px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+
+        form input {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            outline: none;
+            border: 1.5px solid #ccc;
+            margin-top: 3px;
+            margin-bottom: 3px;
+        }
+
+        form button {
+            width: 100%;
+            border: none;
+            background-color: #0c0c0c;
+            color: #fff;
+            padding: 8px;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+
+        form button:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <center>
+        <h1>email or text field validation</h1>
+    </center>
+    <hr> -->
+    <section class="container">
+        <form action="" onsubmit="SubmitHanlder(event)">
+            <label for="mobile">Phone number</label>
+            <input type="text" name="mobile" id="mobile" placeholder="Enter your number" onkeyup="SubmitHanlder(event)">
+            <small id="error"></small>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <script>
+        var mobileInput = document.getElementById('mobile');
+        var errortag = document.getElementById('error');
+
+        function SubmitHanlder(e) {
+            e.preventDefault();
+            let regx = /^[6-9]\d{9}$/; //9826763633
+            console.log(regx.test(mobileInput.value));
+
+            if (mobileInput.value.length == 0) {
+                errortag.innerHTML = '<span style="color:red">Please fill mobile number</span>'
+            } else {
+                if (regx.test(mobileInput.value) == false) {
+                    errortag.innerHTML = '<span style="color:red">Invalid mobile number</span>'
+                } else {
+                    errortag.innerHTML = '<span style="color:green">valid mobile number</span>'
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>

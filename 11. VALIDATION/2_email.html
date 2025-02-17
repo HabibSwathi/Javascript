@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        form {
+            width: 300px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+
+        form input {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            outline: none;
+            border: 1.5px solid #ccc;
+            margin-top: 3px;
+            margin-bottom: 3px;
+        }
+
+        form button {
+            width: 100%;
+            border: none;
+            background-color: #0c0c0c;
+            color: #fff;
+            padding: 8px;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+
+        form button:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <center>
+        <h1>email or text field validation</h1>
+    </center>
+    <hr> -->
+    <section class="container">
+        <form action="" onsubmit="SubmitHanlder(event)">
+            <label for="email">Email address</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email" onkeyup="SubmitHanlder(event)">
+            <small id="error"></small>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <script>
+        var emailInput = document.getElementById('email');
+        var errortag = document.getElementById('error');
+
+        function SubmitHanlder(e) {
+            e.preventDefault();
+            let regx = /^\S+@\S+\.\S+$/;
+            console.log(regx.test(emailInput.value) == false);
+
+            if (emailInput.value.length == 0) {
+                errortag.innerHTML = '<span style="color:red">Please fill email field</span>'
+            } else {
+                // ..regular expression will returns only true or false 
+                if (regx.test(emailInput.value) == false) {
+                    errortag.innerHTML = '<span style="color:red">Invalid email</span>'
+                } else {
+                    errortag.innerHTML = '<span style="color:green">Valid email</span>'
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
