@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>String methods in date constructor</h1>
+    </center>
+    <hr>
+    <script>
+        let date = new Date(); //instance for Date()
+        document.write(`<h1>${date}</h1>`)
+        document.write(`<h1>Date in string formate = ${date.toDateString()}</h1>`)
+        document.write(`<h1>Date in local formate = ${date.toLocaleDateString()}</h1>`)
+
+        document.write(`<h1>Time in string formate = ${date.toTimeString()}</h1>`)
+        document.write(`<h1>Time in string local formate = ${date.toLocaleTimeString()}</h1>`)
+
+
+        //example
+        document.write(`<h1>${date.toLocaleDateString()}</h1>`); //date/month/year
+        //output: date-month-year
+        // console.log(date.toLocaleDateString());
+        // console.log(date.toLocaleDateString().split('/'));
+        // console.log(date.toLocaleDateString().split('/').join('-'));
+        let localdate = date.toLocaleDateString();
+        console.log(localdate); //2/11/2025
+        let dateArray = localdate.split('/'); //array
+        console.log(dateArray); //['2', '11', '2025']
+        let finalDate = dateArray.join('-')
+        document.write(`<h1>${finalDate}</h1>`)
+
+        //example
+        document.write(`<h1>${date.toLocaleTimeString()}</h1>`);
+        let localtime = date.toLocaleTimeString();
+        console.log(localtime); //11:39:06 AM
+        let timeArray = localtime.split(':');
+        document.write(`<h1>${timeArray.join(' - ')}</h1>`)
+        console.log(timeArray);
+
+        let lastIndex = timeArray[2].split(' ');
+        console.log(lastIndex);
+
+        //deleting last element fron timeArray
+        timeArray.pop();
+        console.log(timeArray);
+        //inserting new element to timeArray
+        timeArray.push(lastIndex[0]);
+
+        //final array 
+        console.log(timeArray);
+        let finalTime = timeArray.join('-');
+        document.write(`<h1>${finalTime}</h1>`)
+    </script>
+</body>
+
+</html>

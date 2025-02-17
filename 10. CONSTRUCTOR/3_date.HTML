@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date constructor</title>
+</head>
+
+<body>
+    <center>
+        <h1>date constructor (Date Object)</h1>
+    </center>
+    <hr>
+
+    <script>
+        var date = new Date(); //created instance for Date constructor inside the date variable by using new keyword
+
+        document.write(`<h1>date = ${date}</h1>`)
+        //methods in Date()
+        document.write(`<h1>To get the day = ${date.getDay()}</h1>`)
+        document.write(`<h1>To get the date = ${date.getDate()}</h1>`)
+        document.write(
+            `<h1>To get the month = ${date.getMonth()}</h1>`) //1 because jan = 0 and dec = 11 then feb = 1 month start from 0
+        document.write(`<h1>To get the year = ${date.getFullYear()}</h1>`)
+
+        //getting time methods
+        document.write(`<h1>To get the hours = ${date.getHours()}</h1>`)
+        document.write(`<h1>To get the minutes = ${date.getMinutes()}</h1>`)
+        document.write(`<h1>To get the seconds = ${date.getSeconds()}</h1>`)
+        document.write(`<h1>To get the milliseconds = ${date.getMilliseconds()}</h1>`)
+
+        //GMT time and UTC => universel  time coordinated
+        document.write(`<h1>to get UTC Date = ${date.getUTCDate()}</h1>`)
+        document.write(`<h1>to get UTC day = ${date.getUTCDay()}</h1>`)
+        document.write(`<h1>to get UTC month = ${date.getUTCMonth()}</h1>`)
+        document.write(`<h1>to get UTC year = ${date.getUTCFullYear()}</h1>`)
+
+        document.write(`<h1>to get UTC hours = ${date.getUTCHours()}</h1>`)
+        document.write(`<h1>to get UTC minutes = ${date.getUTCMinutes()}</h1>`)
+        document.write(`<h1>to get UTC seconds = ${date.getUTCSeconds()}</h1>`)
+        document.write(`<h1>to get UTC milliseconds = ${date.getUTCMilliseconds()}</h1>`)
+    </script>
+
+</body>
+
+</html>

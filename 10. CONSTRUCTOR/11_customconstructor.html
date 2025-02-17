@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Custom Constructor</h1>
+    </center>
+
+    <script>
+        //creating constructor using function constructor/class constructor
+        function User() {
+            //local properties
+            //let a = 10
+            this.firstname = "arun"
+            this.lastname = "kumar"
+            this.email = "arun@gmail.com"
+            this.fullName = function () {
+                return this.firstname + " " + this.lastname;
+            }
+            this.marks = [12, 34, 56, 78, 54];
+            this.address = {
+                city: "Bangalore",
+                doorNo: 89,
+                pincode: 560721
+            }
+        }
+
+        //creating instance for User custom constructor using new keyword
+        let user1 = new User(); //created instance inside the user1 variable for user constructor using new keyword
+        console.log('user1 = ', user1);
+
+        let user2 = new User();
+        console.log('user2 = ', user2);
+    </script>
+</body>
+
+</html>

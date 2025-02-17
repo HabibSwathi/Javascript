@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Object constructor</h1>
+    </center>
+    <hr>
+
+    <script>
+        //creating objects using literal type 
+        var user1 = {
+            name: "Arun",
+            email: "arun@gamil.com",
+            age: 25,
+            isOnline: true,
+            mobile: '+9198387333'
+        }
+        console.log(user1);
+        //to access or print object properties
+        //method1 (object.key)
+        console.log(user1.name);
+        console.log(user1.email);
+        console.log(user1.age);
+        console.log(user1.isOnline);
+        console.log(user1.mobile);
+
+        //method2 (object["key"]);
+        console.log(user1["name"]);
+        console.log(user1["email"]);
+        console.log(user1["age"]);
+        console.log(user1["isOnline"]);
+        console.log(user1["mobile"]);
+
+        //creating object variables using constructor method
+        var user2 = new Object(); //empty object
+        console.log('user2 = ', user2);
+        //assaigning values to empty constructor object
+        //method1(object.kay = value)
+        user2.username = "arun kumar"
+        console.log('after a value user2 = ', user2);
+        user2.userEmail = "arun123@gmail.com"
+        user2.age = 27;
+        console.log('user2 = ', user2);
+
+
+        //method2
+        user2["phonenumber"] = "+91837873783";
+        user2["isOnline"] = false;
+        user2["marks"] = [123, 456, 789]
+        console.log(user2);
+
+
+
+        //creating variables using constructor with parameter
+        var user3 = new Object({
+            firstName: 'arun',
+            lastname: 'kumar',
+            age: 28,
+            isOnline: false,
+            mobileNumber: '+91837733334',
+            marks: [89, 100, 56, 67]
+        });
+        console.log('user3 = ', user3);
+        console.log(user3.firstName);
+        console.log(user3.lastname);
+        console.log(user3.firstName + " " + user3.lastname);
+        console.log(user3.age);
+        console.log(user3.isOnline);
+        console.log(user3.mobileNumber);
+        console.log(user3.marks[0]);
+        console.log(user3.marks[1]);
+        console.log(user3.marks[2]);
+        console.log(user3.marks[3]);
+
+        //method2
+        console.log(user3["firstName"]);
+        console.log(user3["lastname"]);
+        console.log(user3["firstName"] + " " + user3['lastname']);
+        console.log(user3["age"]);
+        console.log(user3["mobileNumber"]);
+        console.log(user3["isOnline"]);
+        console.log(user3["marks"]);
+        console.log(user3["marks"][0]);
+        console.log(user3["marks"][1]);
+        console.log(user3["marks"][2]);
+        console.log(user3["marks"][3]);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Date Constructor (Date Object)</h1>
+    </center>
+    <script>
+        //Date(), Number(), String(), Array(), Object();
+        // example1
+        let date = new Date();
+        console.log(date);
+        document.write(`<h1>date = ${date}</h1>`)
+        document.write(`<h1>date datatype= ${typeof(date)}</h1>`)
+        document.write(`<hr>`)
+
+        //example2
+        let date2 = new Date(2018, 0, 31, 14, 20,
+            35); //year, month, date, hours, minutes, seconds => number parameters to date constructor
+        document.write(`<h1>Date() constructor with parameter = ${date2}</h1>`)
+        document.write(`<hr>`);
+
+        //example3
+        let date3 = new Date('31 january 2025'); //date month year => string parameters
+        document.write(`<h1>date3 = ${date3}</h1>`)
+        document.write(`<hr>`)
+    </script>
+</body>
+
+</html>

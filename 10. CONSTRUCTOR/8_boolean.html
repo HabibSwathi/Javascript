@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>boolean Constructor</h1>
+    </center>
+    <hr>
+    <script>
+        var test1 = new Boolean(10<12);//true
+        console.log(test1);
+        console.log(typeof test1);
+        
+        var test2 = new Boolean(10>12); //false
+        console.log(test2);
+        
+        var test3 = true; //literal type
+        console.log(test3);
+        
+        var isOnline = new Boolean(true); //creating boolean variable constructor with parameter
+        console.log(isOnline);
+
+        //creating variable without constructor parameter
+        var isAdmin = new Boolean();
+        isAdmin = true;
+        console.log(isAdmin);
+        isAdmin = false;
+        console.log(isAdmin);
+        
+        
+    </script>
+</body>
+</html>

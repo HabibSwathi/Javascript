@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>random()</h1>
+    </center>
+    <hr>
+    <script>
+        console.log(Math.round(Math.random())); //random value is 0-1
+        //just if we want random number between som perticular number just we can multiply random with perticular number Math.random() * 100 => 0-100
+
+        console.log(Math.round(Math.random() * 100));
+
+        //without fractional number
+        let randomNumber = Math.round(Math.random() * 100);
+        document.write(`<h1>random number between 0-100 = ${randomNumber}</h1>`)
+
+        //with fractional number
+        let randomNumber1 = Math.random() * 100;
+        document.write(`<h1>random number between 0-100 = ${randomNumber1}</h1>`)
+    </script>
+</body>
+
+</html>

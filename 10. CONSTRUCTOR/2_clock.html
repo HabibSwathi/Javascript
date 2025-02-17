@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .card {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card h1 {
+            font-size: 4rem;
+            /* letter-spacing: 10px; */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <center>
+        <h1>Digital Clock</h1>
+    </center>
+    <hr> -->
+
+    <div class="container">
+        <div class="card">
+            <h1 id="time">00:00:00</h1>
+        </div>
+    </div>
+
+    <script>
+        // let date = new Date();
+        // document.write(date.getHours());
+        // document.write(date.getMinutes());
+        // document.write(date.getSeconds());
+
+        var headingTag = document.getElementById('time');
+
+        function digitalClock() {
+            let clock = new Date();
+            headingTag.innerHTML =
+                ` <span>${clock.getHours()}</span>:<span>${clock.getMinutes()}</span>:<span>${clock.getSeconds()}</span>`
+        }
+
+        //calling function
+        setInterval(' digitalClock()', 1000); //1000ms = 1s
+    </script>
+</body>
+
+</html>
