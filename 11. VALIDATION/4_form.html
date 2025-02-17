@@ -14,30 +14,34 @@
         <div class="row">
             <div class="col-md-6 m-auto">
                 <div class="card p-3">
-                    <form action="">
+                    <form action="" onsubmit="submitHandler(event)" novalidate>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group mt-3">
                                     <label for="" class="form-label">Username</label>
                                     <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                                    <small class="nameError"></small>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group mt-3">
                                     <label for="" class="form-label">Email address</label>
                                     <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                                    <small class="emailError"></small>
                                 </div>
                             </div>
                             <div class="col-md-8">
                                 <div class="form-group mt-3">
                                     <label for="" class="form-label">Phone number</label>
                                     <input type="text" class="form-control" id="number" placeholder="Enter your number">
+                                    <small class="phoneError"></small>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group mt-3">
                                     <label for="" class="form-label">Age</label>
                                     <input type="number" class="form-control" id="age" placeholder="Enter your age">
+                                    <small class="ageError"></small>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -50,6 +54,7 @@
                                         <option value="java">Java fullstack</option>
                                         <option value="python">Python fullstack</option>
                                     </select>
+                                    <small class="courseError"></small>
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -57,69 +62,57 @@
                                     <label for="" class="form-label">College name</label>
                                     <input type="text" class="form-control" placeholder="Enter college name"
                                         id="college">
+                                    <small class="collegeError"></small>
                                 </div>
                             </div>
                             <div class="col-md-12 mt-3">
                                 <label class="form-label" for="">Languages</label>
-                                <div class="d-flex gap-3">
+                                <div class="d-flex gap-3 flex-wrap">
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input">
+                                        <input type="checkbox" class="form-check-input" name="lang" value="kannada">
                                         <label for="" class="form-check-label">Kannada</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input">
+                                        <input type="checkbox" class="form-check-input" name="lang" value="hindi">
                                         <label for="" class="form-check-label">Hindi</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input">
+                                        <input type="checkbox" class="form-check-input" name="lang" value="marati">
                                         <label for="" class="form-check-label">Marati</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input">
+                                        <input type="checkbox" class="form-check-input" name="lang" value="tamil">
                                         <label for="" class="form-check-label">Tamil</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input">
+                                        <input type="checkbox" class="form-check-input" name="lang" value="telugu">
                                         <label for="" class="form-check-label">Telugu</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input">
+                                        <input type="checkbox" class="form-check-input" name="lang" value="english">
                                         <label for="" class="form-check-label">English</label>
                                     </div>
                                 </div>
+                                <small class="langError"></small>
                             </div>
-                            <div class="col-md-4 mt-3">
-                                <label for="">Select Your Gender</label>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                        id="flexRadioDefault1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                            <div class="col-md-6">
+                                <div class="form-group mt-3">
+                                    <label for="" class="form-label">Gender</label><br>
+                                    <label for="">
+                                        <input type="radio" name="gender" id="gender" value="male">
                                         Male
                                     </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                        id="flexRadioDefault1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <label for="">
+                                        <input type="radio" name="gender" id="gender" value="female">
                                         Female
                                     </label>
-                                </div>
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                        id="flexRadioDefault1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
-                                        Other
-                                    </label>
+                                    <br>
+                                    <small class="genderError"></small>
                                 </div>
                             </div>
-                            <div class="col-md-4 mt-3">
-                                <label for="">City</label>
-                                <select name="Bangalore" id="Bangalore">Bangalore</select>
-                                <select name="Other" id="Bangalore">Other</select>
-                            </div>
-                            <div class="col-md-4 mt-3">
-                                
+                            <div class="d-flex gap-3 mt-3">
+                                <button class="btn btn-primary" type="submit">Create account</button>
+                                <button class="btn btn-danger" type="reset">Cancel</button>
                             </div>
                         </div>
                     </form>
@@ -127,6 +120,130 @@
             </div>
         </div>
     </section>
+
+
+    <script>
+        var username = document.getElementById('name')
+        var email = document.getElementById('email');
+        var phonenumber = document.getElementById('number');
+        var age = document.getElementById('age');
+        var course = document.getElementById('course');
+        var gender = document.getElementsByName('gender');
+        var college = document.getElementById('college');
+
+        //errors
+        var nameError = document.querySelector('.nameError');
+        var emailError = document.querySelector('.emailError');
+        var phoneError = document.querySelector('.phoneError');
+        var ageError = document.querySelector('.ageError');
+        var courseError = document.querySelector('.courseError');
+        var genderError = document.querySelector('.genderError');
+        var collegeError = document.querySelector('.collegeError');
+        var langError = document.querySelector('.langError');
+
+
+        //selecting checkboxes
+        var checkBoxes = document.getElementsByName('lang');
+        console.log(checkBoxes);
+
+
+
+        function submitHandler(e) {
+            e.preventDefault();
+            if (username.value == "") {
+                nameError.innerHTML = "<span style='color:red'>Please fill username</span>"
+            } else {
+                let regx = /^[a-zA-Z\s]+$/
+                if (regx.test(username.value) == false) {
+                    nameError.innerHTML = "<span style='color:red'>Invalid username</span>"
+                } else {
+                    nameError.innerHTML = "<span style='color:green'>Valid username</span>"
+                }
+            }
+
+            if (email.value == "") {
+                emailError.innerHTML = "<span style='color:red'>Please fill email</span>"
+            } else {
+                let regx = /^\S+@\S+\.\S+$/
+                if (regx.test(email.value) == false) {
+                    emailError.innerHTML = "<span style='color:red'>Invalid email</span>"
+                } else {
+                    emailError.innerHTML = "<span style='color:green'>Valid email</span>"
+                }
+            }
+
+            if (phonenumber.value == "") {
+                phoneError.innerHTML = "<span style='color:red'>Please fill phone number</span>"
+            } else {
+                let regx = /^[6-9]\d{9}$/
+                if (regx.test(phonenumber.value) == false) {
+                    phoneError.innerHTML = "<span style='color:red'>Invalid phone number</span>"
+                } else {
+                    phoneError.innerHTML = "<span style='color:green'>Valid phone number</span>"
+                }
+            }
+
+            if (age.value == "") {
+                ageError.innerHTML = "<span style='color:red'>Please fill age</span>"
+            } else {
+                // let regx = /^[6-9]\d{9}$/
+                if (age.value < 18) {
+                    ageError.innerHTML = "<span style='color:red'>Not Eligible</span>"
+                } else {
+                    ageError.innerHTML = "<span style='color:green'>Eligible Age</span>"
+                }
+            }
+
+            if (course.value == "") {
+                courseError.innerHTML = "<span style='color:red'>Please choose course</span>"
+            } else {
+                courseError.innerHTML = "<span style='color:green'>valid course name</span>"
+            }
+
+            if (college.value == "") {
+                collegeError.innerHTML = "<span style='color:red'>Please fill college name</span>"
+            } else {
+                collegeError.innerHTML = "<span style='color:green'>valid college name</span>"
+            }
+            console.log(gender.value);
+
+            let selectedLanguages = [];
+            for (let i = 0; i < checkBoxes.length; i++) {
+                console.log(checkBoxes[i]);
+                if (checkBoxes[i].checked) {
+                    selectedLanguages.push(checkBoxes[i].value)
+                }
+
+                if (selectedLanguages.length == 0) {
+                    langError.innerHTML = '<span style="color:red">Please select language</span>'
+                } else {
+                    if (selectedLanguages.length <= 2) {
+                        langError.innerHTML = '<span style="color:red">Please select at least 3 languages</span>'
+                    } else {
+                        langError.innerHTML = '<span style="color:green">Languages selected</span>'
+                    }
+
+                }
+
+            }
+
+            let selectedGender = '';
+            for (let i = 0; i < gender.length; i++) {
+                if (gender[i].checked) {
+                    selectedGender = gender[i].value
+                }
+
+            }
+            if (selectedGender == '') {
+                genderError.innerHTML = '<span style="color:red">Please choose gender</span>'
+            } else {
+                genderError.innerHTML = '<span style="color:green">Valid gender</span>'
+
+            }
+
+
+        }
+    </script>
 </body>
 
 </html>
