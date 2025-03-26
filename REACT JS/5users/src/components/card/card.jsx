@@ -8,13 +8,13 @@ function Card() {
   return (
     <div className='container-fluid p-5'>
       <div className="row p-2 p-md-4">
-        <div className="col-md-5">
-          <div className="card p-3 w-100">
-          <h4>Jobs</h4>
-          <hr />
-          {jobDetails.map((item, index) => (
+      <div className="col-md-5">
+      <div className="card p-3 w-100">
+        <h4>Jobs</h4>
+        <hr />
+        {jobDetails.map((item, index) => (
+          <div key={index}>
             <div
-              key={index}
               onClick={() => setSelectedJob(item)}
               className={`p-2 job-item ${selectedJob === item ? 'selected-job' : ''}`}
             >
@@ -24,12 +24,12 @@ function Card() {
                 <p className="m-0"><i className="bi bi-geo-alt"></i> {item.location}</p>
                 <p className='ps-4'><i className="bi bi-clock"></i> {item.experience}</p>
               </div>
-              <hr/>
             </div>
-          ))}
+            {index !== jobDetails.length-1 && <hr/>} 
+          </div>
+        ))}
       </div>
-
-        </div>
+    </div>
 
         <div className="col-md-7">
           {selectedJob && (
