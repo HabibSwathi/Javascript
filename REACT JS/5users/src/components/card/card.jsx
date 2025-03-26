@@ -20,10 +20,10 @@ function Card() {
             >
               <p className="fw-bold">{item.title}</p>
               <p className="text-success">{item.company}</p>
-              <div className="d-flex">
+              <div className="d-flex text-body-secondary">
                 <p className="m-0"><i className="bi bi-geo-alt"></i> {item.location}</p>
+                <p className='ps-4'><i className="bi bi-clock"></i> {item.experience}</p>
               </div>
-              <p><i className="bi bi-clock"></i> {item.experience}</p>
               <hr/>
             </div>
           ))}
