@@ -1,0 +1,10 @@
+.bg-green {
+    background-color: rgba(119, 212, 119, 0.137);
+    padding: 5px 10px;
+}
+
+.selected-job {
+    background-color: rgba(119, 212, 119, 0.137); 
+    border-radius: 5px;
+  }
+  
