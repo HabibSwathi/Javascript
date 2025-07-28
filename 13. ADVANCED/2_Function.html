@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Anonymous Callbacks functions or Immediate execution of a function</h1>
+    </center>
+    <hr>
+
+    <h2>JAVASCRIPT FUNCTIONS</h2>
+    <p>1) Local Function = function A(){}</p>
+    <p>2) Expression Function = let A = function(){}</p>
+    <p>3) Arrow Function = let A () => {}</p>
+    <p>4) CallBack Function = forEach(function(item){});</p>
+    <p>5) Closer Function = function A(){ function B(){} B();}</p>
+    <p>6) Anonymous Function or Immediate execution of a function= ()();</p>
+
+
+    <script>
+        //examplw-1
+        // (function(){alert("Hi Annonymouse Function");})() //without parameter annonymouse function
+
+        //example-2 => annonymouse function with parameter
+        // function sumOf2Numbers(a, b){
+        //     document.write(<h1>a+b = ${a+b}</h1>);//40
+        // }
+
+        (function (a, b) {
+            document.write(`<h1>a+b = ${a+b}</h1>`); //60
+        })(10, 50)
+
+        // (()=>{
+        //     //block code
+        // })() //here we can the function
+
+        //example3
+        // annonymouse function with return 
+
+        console.log(((a, b) => {
+            return a + b;
+        })(20, 30));
+
+        document.write(`<h1>${((a, b)=>{
+            return a+b;
+        })(20, 30)}</h1>`)
+    </script>
+</body>
+
+</html>

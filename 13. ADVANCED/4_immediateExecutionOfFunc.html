@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Anonymous Callbacks functions or Immediate execution of a function</h1>
+    </center>
+    <hr>
+
+    <h2>JAVASCRIPT FUNCTIONS</h2>
+    <p>1) Local Function = function A(){}</p>
+    <p>2) Expression Function = let A = function(){}</p>
+    <p>3) Arrow Function = let A () => {}</p>
+    <p>4) CallBack Function = forEach(function(item){});</p>
+    <p>5) Closer Function = function A(){ function B(){} B();}</p>
+    <p>6) Anonymous Function or Immediate execution of a function= ()();</p>
+
+    <script>
+        // function Calculations(){
+        //     let a =10, b=30, c =50, total, substract, mult;
+        //     total = a+b+c;
+        //     substract = a-b-c;
+        //     mult = a*b*c;
+
+        //     //to return multiple values in a singlee return
+        //     // return [total, substract, mult];
+        //     return {
+        //         sum:total,
+        //         sub:substract,
+        //         multiplication:mult
+        //     }
+
+        // }
+
+        // // console.log(Calculations()[0]); //array
+        // // console.log(Calculations()[1]); //array
+        // // console.log(Calculations()[2]); //array
+
+        // // for(let i=0; i<Calculations().length; i++){
+        // //     console.log(function [${i}] = ${Calculations()[i]});
+        // // }
+
+        // console.log(Calculations());
+        // console.log(Calculations().sum);
+        // console.log(Calculations().sub);
+        // console.log(Calculations().multiplication);
+
+        function Calculations() {
+            let a = 10,
+                b = 30,
+                c = 50,
+                total, substract, mult;
+            total = a + b + c;
+            substract = a - b - c;
+            mult = a * b * c;
+
+            return total; //90 //function will stops execution in this line next line wont execute
+            return substract; //-70
+            return mult; //15000
+
+        }
+        console.log(Calculations());
+
+        function* users() {
+            //yield is kind of a return
+
+
+            yield "Arun"
+            yield "mahesh"
+            yield "Ranjith"
+            yield "Savi"
+            yield "Venki"
+        }
+
+        console.log(users());
+        console.log(typeof (users()));
+
+        for (let item of users()) {
+            console.log(item);
+        }
+    </script>
+</body>
+
+</html>

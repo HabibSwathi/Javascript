@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <H1>Hoisting</H1>
+        <p>Hoisting is the default behavior of moving all the declarations at the top of the scope before code
+            execution.</p>
+    </center>
+    <hr>
+
+    <h1>Function Hoisting</h1>
+    <script>
+        //calling function before declaration
+        // sayHello(); //calling   
+
+        function sayHello() { //declartion
+            alert("Hello")
+        }
+    </script>
+
+
+    <h1>Variable Hoisting</h1>
+    <script>
+        //before declartion number1 variable
+
+        // number1 = 100; //we are assaigning a 
+        // console.log(number1); //using variable
+        // var x = 5;
+        // var y; //declare y
+        // alert(x+ " , " + y); //output: 5, undefined
+        // y=10; //initialize y variable
+        // alert(x+ " , " + y); //output: 5, undefined
+
+
+        // str = "hello world";
+        // alert(str)
+        // var str; //declaration
+
+        str2 = "hello"
+        console.log(str2);
+        var str2;
+
+        isAdmin = false;
+        console.log(isAdmin);
+        var isAdmin; //declartion it will go top of the scope on execution time
+    </script>
+</body>
+
+</html>

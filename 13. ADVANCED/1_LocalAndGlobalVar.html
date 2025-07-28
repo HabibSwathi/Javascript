@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Andvanced JS</h1>
+    </center>
+    <hr>
+
+    <script>
+        var number1 = 100; //Global variable
+
+        function whoisthis() {
+            var number2 = 200; //local variable
+            var number3 = 300; //local variable
+
+            document.write(`<h1>number2 = ${number2}</h1>`)
+            document.write(`<h1>number3 = ${number3}</h1>`)
+            document.write(`<h1>number1 = ${number1}</h1>`)
+        }
+        whoisthis()
+        document.write(`<h1>number1 = ${number1}</h1>`)
+
+        // document.write(`<h1>number2 = ${number2}</h1>`)
+        // document.write(`<h1>number3 = ${number3}</h1>`)
+
+        function whoiam() {
+            document.write(`<h1>number2 = ${number2}</h1>`)
+            // Uncaught ReferenceError: number2 is not defined
+            // at whoiam (p1.html:32:49)
+
+            document.write(`<h1>number3 = ${number3}</h1>`)
+            document.write(`<h1>number1 = ${number1}</h1>`)
+        }
+
+        whoiam()
+    </script>
+</body>
+
+</html>

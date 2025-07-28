@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Anonymous Callbacks functions or Immediate execution of a function</h1>
+    </center>
+    <hr>
+
+    <h2>JAVASCRIPT FUNCTIONS</h2>
+    <p>1) Local Function = function A(){}</p>
+    <p>2) Expression Function = let A = function(){}</p>
+    <p>3) Arrow Function = let A () => {}</p>
+    <p>4) CallBack Function = forEach(function(item){});</p>
+    <p>5) Closer Function = function A(){ function B(){} B();}</p>
+    <p>6) Anonymous Function or Immediate execution of a function= ()();</p>
+
+    <script>
+        // (params) => statement 
+        let sum = (a) => 10 + a; //returning 10 + a when we are using without any block
+
+        document.write(`<h1>sum = ${sum(50)}</h1>`)
+
+        //to write multiple statements
+        let fullname = (fisrtname, lastname) => {
+            document.write(`<h1>firstname = ${fisrtname}</h1>`)
+            document.write(`<h1>lastname = ${lastname}</h1>`)
+            document.write(`<h1>fullname = ${fisrtname + " " + lastname}</h1>`)
+            // return fullname;
+        }
+        fullname("Arun", "Kumar");
+
+        let myName = () => console.log("Arun test");
+        myName();
+    </script>
+</body>
+
+</html>
